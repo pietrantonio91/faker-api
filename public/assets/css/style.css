@@ -1,0 +1,114 @@
+.navbar-dark {
+    background: linear-gradient(#1B1B1B, #414141);
+}
+
+.navbar-brand svg {
+    max-height: 70px;
+}
+
+.footer svg path {
+    fill: #000;
+}
+.footer {
+    background: linear-gradient(#1B1B1B, #414141);
+    color: #eee;
+    padding: 40px;
+    font-size: small;
+}
+
+h2 {
+    background: linear-gradient(to right, #00ff8f 30%, #00a1ff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+}
+h4 {
+    font-size: 1.7em;
+}
+p, a {
+    font-size: 19px;
+}
+
+a {
+    color: #00a1ff;
+}
+a:hover {
+    color: #00ff8f;
+    text-decoration: none;
+}
+
+h5 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.btn-gradient {
+    background:#00a1ff;
+    color: #fff;
+}
+.btn-gradient:hover {
+    background: #00ff8f;
+    color: #fff;
+}
+.color-gradient {
+    background: linear-gradient(to right, #00ff8f, #00a1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-diag-grey {
+    fill: #eee;
+}
+
+.section-diag-white {
+    fill: #fff;
+}
+
+.background-grey {
+    background-color: #eee;
+}
+
+#accordionDocs .card-header {
+    background: #f8f8f8;
+    border-radius: 0;
+    border: 0;
+    cursor: pointer;
+    color: #282828;
+}
+
+#accordionDocs .card-header.collapsed:hover, #accordionDocs .card-header.collapsed:active {
+    background: #f8f8f8;
+}
+
+#accordionDocs .card-header.collapsed {
+    background: #fff;
+}
+
+#accordionDocs .card {
+    margin-top: 5px;
+    border-radius: 0;
+    border: 0;
+}
+
+#accordionDocs .card .card-body {
+    border-top: 5px solid #f8f8f8;
+}
+
+.hljs {
+    font-size: 17px;
+    padding: 15px;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #ccc;
+    height: 45px;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid #00ff8f;
+    color: #495057;
+    background-color: #f2f2f2;
+    box-shadow: none;
+}
