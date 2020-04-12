@@ -112,3 +112,7 @@ h5 {
     background-color: #f2f2f2;
     box-shadow: none;
 }
+
+.btn-field:focus {
+    outline: 0;
+}
