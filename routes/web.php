@@ -13,6 +13,7 @@
 
 $router->get('/', 'Frontend\\HomeController@index');
 $router->get('/fake-data-csv', 'Frontend\\DownloadController@index');
+$router->post('/download', 'Frontend\\DownloadController@download');
 
 
 $router->group(['prefix' => 'api', 'namespace' => 'Api'], function() use ($router) {

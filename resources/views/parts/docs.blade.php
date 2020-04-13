@@ -496,126 +496,16 @@
                             <thead>
                                 <tr>
                                     <th>Parameter</th>
-                                    <th>Description</th>
+                                    <th>Example</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($types as $type)
                                 <tr>
-                                    <td>number</td>
-                                    <td></td>
+                                    <td>{!! $type['type'] !!}</td>
+                                    <td>{!! json_encode($type['example']) !!}</td>
                                 </tr>
-                                <tr>
-                                    <td>text</td>
-                                    <td>200 characters</td>
-                                </tr>
-                                <tr>
-                                    <td>longText</td>
-                                    <td>1000 caratteri</td>
-                                </tr>
-                                <tr>
-                                    <td>firstName</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>lastName</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>name</td>
-                                    <td>firstName lastName</td>
-                                </tr>
-                                <tr>
-                                    <td>email</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>phone</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>date</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>dateTime</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>image</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>word</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>streetAddress</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>streetName</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>buildingNumber</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>city</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>postcode</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>country</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>countryCode</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>state</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>latitude</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>longitude</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>vat</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>website</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>card_type</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>card_number</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>card_expiration</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>ean</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>upc</td>
-                                    <td></td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <p>

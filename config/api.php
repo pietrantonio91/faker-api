@@ -95,5 +95,8 @@ return [
             'method' => 'regexify',
             'args' => ['[0-9]{12}']
         ],
+        'uuid' => [
+            'method' => 'uuid'
+        ],
     ]
 ];
