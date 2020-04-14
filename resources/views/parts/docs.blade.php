@@ -211,44 +211,46 @@
                         <p>
                             Additional optional parameters:
                         </p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Parameter</th>
-                                    <th>Description</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>_type</td>
-                                    <td>
-                                        any, animals, architecture, nature, people, tech, kittens
-                                    </td>
-                                    <td>
-                                        <pre>_type=architecture</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_width</td>
-                                    <td>
-                                        pixels (default: 640)
-                                    </td>
-                                    <td>
-                                        <pre>_width=500</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_height</td>
-                                    <td>
-                                        pixels (default: 480)
-                                    </td>
-                                    <td>
-                                        <pre>_height=230</pre>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>_type</td>
+                                        <td>
+                                            any, animals, architecture, nature, people, tech, kittens
+                                        </td>
+                                        <td>
+                                            <pre>_type=architecture</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_width</td>
+                                        <td>
+                                            pixels (default: 640)
+                                        </td>
+                                        <td>
+                                            <pre>_width=500</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_height</td>
+                                        <td>
+                                            pixels (default: 480)
+                                        </td>
+                                        <td>
+                                            <pre>_height=230</pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <p>
                             Request:
                         </p>
@@ -275,44 +277,46 @@
                         <p>
                             Additional optional parameters:
                         </p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Parameter</th>
-                                    <th>Description</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>_gender</td>
-                                    <td>
-                                        male, female
-                                    </td>
-                                    <td>
-                                        <pre>_gender=female</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_birthday_start</td>
-                                    <td>
-                                        date in format Y-m-d (default: -90 years)
-                                    </td>
-                                    <td>
-                                        <pre>_birthday_start=1994-02-09</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_birthday_end</td>
-                                    <td>
-                                        date in format Y-m-d (default: now)
-                                    </td>
-                                    <td>
-                                        <pre>_birthday_end=2018-10-09</pre>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>_gender</td>
+                                        <td>
+                                            male, female
+                                        </td>
+                                        <td>
+                                            <pre>_gender=female</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_birthday_start</td>
+                                        <td>
+                                            date in format Y-m-d (default: -90 years)
+                                        </td>
+                                        <td>
+                                            <pre>_birthday_start=1994-02-09</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_birthday_end</td>
+                                        <td>
+                                            date in format Y-m-d (default: now)
+                                        </td>
+                                        <td>
+                                            <pre>_birthday_end=2018-10-09</pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <p>
                             Request:
                         </p>
@@ -362,53 +366,55 @@
                         <p>
                             Additional optional parameters:
                         </p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Parameter</th>
-                                    <th>Description</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>_price_min</td>
-                                    <td>
-                                        number in format 10.35 (default: 0.01)
-                                    </td>
-                                    <td>
-                                        <pre>_price_min=20.50</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_price_max</td>
-                                    <td>
-                                        number in format 10.35 (default: none)
-                                    </td>
-                                    <td>
-                                        <pre>_price_max=10320.99</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_taxes</td>
-                                    <td>
-                                        percentage (default: 22)
-                                    </td>
-                                    <td>
-                                        <pre>_taxes=10</pre>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>_categories_type</td>
-                                    <td>
-                                        integer, string, uuid (default: integer)
-                                    </td>
-                                    <td>
-                                        <pre>_categories_type=uuid</pre>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>_price_min</td>
+                                        <td>
+                                            number in format 10.35 (default: 0.01)
+                                        </td>
+                                        <td>
+                                            <pre>_price_min=20.50</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_price_max</td>
+                                        <td>
+                                            number in format 10.35 (default: none)
+                                        </td>
+                                        <td>
+                                            <pre>_price_max=10320.99</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_taxes</td>
+                                        <td>
+                                            percentage (default: 22)
+                                        </td>
+                                        <td>
+                                            <pre>_taxes=10</pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>_categories_type</td>
+                                        <td>
+                                            integer, string, uuid (default: integer)
+                                        </td>
+                                        <td>
+                                            <pre>_categories_type=uuid</pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <p>
                             Request:
                         </p>
@@ -435,26 +441,28 @@
                         <p>
                             Additional optional parameters:
                         </p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Parameter</th>
-                                    <th>Description</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>_characters</td>
-                                    <td>
-                                        integer (default: 200)
-                                    </td>
-                                    <td>
-                                        <pre>_characters=350</pre>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>_characters</td>
+                                        <td>
+                                            integer (default: 200)
+                                        </td>
+                                        <td>
+                                            <pre>_characters=350</pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <p>
                             Request:
                         </p>
@@ -481,26 +489,28 @@
                         <p>
                             Additional optional parameters:
                         </p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Parameter</th>
-                                    <th>Description</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>_gender</td>
-                                    <td>
-                                        male, female
-                                    </td>
-                                    <td>
-                                        <pre>_gender=female</pre>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>_gender</td>
+                                        <td>
+                                            male, female
+                                        </td>
+                                        <td>
+                                            <pre>_gender=female</pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <p>
                             Request:
                         </p>
@@ -537,22 +547,24 @@
                         <p>
                             Essa consente di costruire una propria risorsa ad hoc usando i tipi di parametro qui elencati:
                         </p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Parameter</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($types as $type)
-                                <tr>
-                                    <td>{!! $type['type'] !!}</td>
-                                    <td>{!! json_encode($type['example']) !!}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($types as $type)
+                                    <tr>
+                                        <td>{!! $type['type'] !!}</td>
+                                        <td>{!! json_encode($type['example']) !!}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                         <p>
                             Custom request:
                         </p>
