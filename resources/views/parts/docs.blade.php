@@ -22,8 +22,8 @@
 </div>
 <div class="row">
     <div class="col-12 mt-5">
-        <h4>
-            <span class="color-gradient">Base URL</span>
+        <h4 id="base-url">
+            <span class="color-gradient">Base URL</span> <a href="#base-url">#</a>
         </h4>
         <p>
             <pre><code class="html">{{\URL::to('/')}}/api/v1/{resource}</code></pre>
@@ -32,8 +32,8 @@
 </div>
 <div class="row">
     <div class="col-12 mt-5">
-        <h4>
-            <span class="color-gradient">Basic Usage</span>
+        <h4 id="basic-usage">
+            <span class="color-gradient">Basic Usage</span> <a href="#basic-usage">#</a>
         </h4>
         <p>
             Alcune risorse permettono di filtrare i risultati in base ai parametri GET che vengono passati.<br>
@@ -96,10 +96,10 @@
         <pre><code class="html">{{\URL::to('/')}}/api/v1/companies?_seed=8665</code></pre>
     </div>
 </div>
-<div class="row">
+<div class="row" id="resources">
     <div class="col-12 mt-5">
-        <h4>
-            <span class="color-gradient">Resources</span>
+        <h4 >
+            <span class="color-gradient">Resources</span> <a href="#resources">#</a>
         </h4>
     </div>
 </div>
