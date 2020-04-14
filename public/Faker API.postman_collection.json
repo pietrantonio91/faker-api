@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "f31da675-d096-49a0-b678-513f9f5484ff",
+		"name": "Faker API - by Alessandro Pietrantonio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Addresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/addresses?_quantity=100&_locale=en_US",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"addresses"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						}
+					]
+				},
+				"description": "Get 100 addresses with en_US locale"
+			},
+			"response": []
+		},
+		{
+			"name": "Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/books?_quantity=100&_locale=en_US",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"books"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						}
+					]
+				},
+				"description": "Get 100 books with en_US locale"
+			},
+			"response": []
+		},
+		{
+			"name": "Companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/companies?_quantity=100&_locale=en_US",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						}
+					]
+				},
+				"description": "Get 100 companies with en_US locale"
+			},
+			"response": []
+		},
+		{
+			"name": "Credit Cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/credit_cards?_quantity=100&_locale=en_US",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"credit_cards"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						}
+					]
+				},
+				"description": "Get 100 credit cards with en_US locale"
+			},
+			"response": []
+		},
+		{
+			"name": "Images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/images?_quantity=100&_locale=en_US&_type=kittens&_height=300",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"images"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						},
+						{
+							"key": "_type",
+							"value": "kittens"
+						},
+						{
+							"key": "_height",
+							"value": "300"
+						}
+					]
+				},
+				"description": "Get 100 kitten images with height of 300 pixels and locale en_US"
+			},
+			"response": []
+		},
+		{
+			"name": "Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/persons?_quantity=100&_locale=en_US&_gender=female",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						},
+						{
+							"key": "_gender",
+							"value": "female"
+						}
+					]
+				},
+				"description": "Get 100 persons with en_US locale and gender female"
+			},
+			"response": []
+		},
+		{
+			"name": "Places",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/places?_quantity=100",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"places"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						}
+					]
+				},
+				"description": "Get 100 places"
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/products?_quantity=100&_locale=en_US&_taxes=10&_categories_type=string",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "en_US"
+						},
+						{
+							"key": "_taxes",
+							"value": "10"
+						},
+						{
+							"key": "_categories_type",
+							"value": "string"
+						}
+					]
+				},
+				"description": "Get 100 products with en_US locale and taxes of 10% and categories type set as string"
+			},
+			"response": []
+		},
+		{
+			"name": "Texts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/texts?_quantity=100&_locale=it_IT&_characters=250",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"texts"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_locale",
+							"value": "it_IT"
+						},
+						{
+							"key": "_characters",
+							"value": "250"
+						}
+					]
+				},
+				"description": "Get 100 texts with it_IT locale and 250 characters length"
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/users?_quantity=100&_gender=male",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "_gender",
+							"value": "male"
+						}
+					]
+				},
+				"description": "Get 100 users with en_US locale and gender male"
+			},
+			"response": []
+		},
+		{
+			"name": "Custom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakerapi.it/api/v1/custom?_quantity=100&name=firstName&surname=lastName&from=country&birthday=date&vatId=vat",
+					"protocol": "https",
+					"host": [
+						"fakerapi",
+						"it"
+					],
+					"path": [
+						"api",
+						"v1",
+						"custom"
+					],
+					"query": [
+						{
+							"key": "_quantity",
+							"value": "100"
+						},
+						{
+							"key": "name",
+							"value": "firstName"
+						},
+						{
+							"key": "surname",
+							"value": "lastName"
+						},
+						{
+							"key": "from",
+							"value": "country"
+						},
+						{
+							"key": "birthday",
+							"value": "date"
+						},
+						{
+							"key": "vatId",
+							"value": "vat"
+						}
+					]
+				},
+				"description": "Get 100 rows with first name, last name, country, birthday, email and vat"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

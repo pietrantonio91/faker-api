@@ -41,7 +41,7 @@ class CustomController extends ApiController
         if($params->seed) $faker->seed($params->seed);
 
         for ($i=0; $i < $params->quantity; $i++) {
-            $results[] = (new Custom($request, $faker, $params))->resolve();
+            $results[] = (new Custom($request, $faker, $params, $counter = $i+1))->resolve();
         }
 
         return response()

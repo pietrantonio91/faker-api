@@ -37,6 +37,10 @@ class DownloadController extends Controller
                         $example = 'http://placeimg.com/640/480/any';
                         break;
 
+                    case 'counter':
+                        $example = $faker->randomDigitNotNull();
+                        break;
+
                     default:
                         break;
                 }
@@ -113,7 +117,7 @@ class DownloadController extends Controller
         // header
         fputcsv($fhandle, array_keys($request->all()), $delimiter);
         for ($i=0; $i < $quantity; $i++) {
-            $row = (new Custom($request, $faker))->toArray($request);
+            $row = (new Custom($request, $faker, null, $i+1))->toArray($request);
             fputcsv($fhandle, $row, $delimiter);
         }
         fclose($fhandle);
@@ -128,7 +132,7 @@ class DownloadController extends Controller
         $fhandle = fopen($file, "w") or die('Unable to open file!');
         $rows = [];
         for ($i=0; $i < $quantity; $i++) {
-            $rows[] = (new Custom($request, $faker))->toArray($request);
+            $rows[] = (new Custom($request, $faker, null, $i+1))->toArray($request);
         }
         fwrite($fhandle, json_encode($rows));
         fclose($fhandle);
@@ -143,7 +147,7 @@ class DownloadController extends Controller
         $fhandle = fopen($file, "w") or die('Unable to open file!');
         $sql = '';
         for ($i=0; $i < $quantity; $i++) {
-            $row = (new Custom($request, $faker))->toArray($request);
+            $row = (new Custom($request, $faker, null, $i+1))->toArray($request);
             $sql .= "INSERT INTO $tableName (".implode(', ', array_keys($row)).") VALUES (\"".implode('", "', array_values($row))."\");\n";
         }
         fwrite($fhandle, $sql);
@@ -160,7 +164,7 @@ class DownloadController extends Controller
         // header
         fputcsv($fhandle, array_keys($request->all()), "\t");
         for ($i=0; $i < $quantity; $i++) {
-            $row = (new Custom($request, $faker))->toArray($request);
+            $row = (new Custom($request, $faker, null, $i+1))->toArray($request);
             fputcsv($fhandle, $row, "\t");
         }
         fclose($fhandle);

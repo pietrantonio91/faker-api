@@ -98,5 +98,8 @@ return [
         'uuid' => [
             'method' => 'uuid'
         ],
+        'counter' => [
+            'method' => 'special'
+        ]
     ]
 ];

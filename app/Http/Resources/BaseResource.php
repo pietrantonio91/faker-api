@@ -14,9 +14,12 @@ class BaseResource extends JsonResource
 
     protected $genders = ['male', 'female'];
 
-    public function __construct(Request $request, FakerGenerator $faker, $params = null)
+    protected $counter = 0;
+
+    public function __construct(Request $request, FakerGenerator $faker, $params = null, $counter = 0)
     {
         $this->faker = $faker;
         $this->params = $params;
+        $this->counter = $counter;
     }
 }

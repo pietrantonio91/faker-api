@@ -11,6 +11,13 @@
             Non è richiesta nessuna chiave o token per l’utilizzo di Faker API. È un servizio gratuito e assolutamente
             open-source.
         </p>
+        <p>
+            <strong>Postman:</strong><br>
+            Scarica la collection di Postman (versione 2.1)<br>
+            <a href="/Faker API.postman_collection.json" class="btn btn-postman mt-3" download><svg class="i-import" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 16 L16 24 24 16"></path>
+            </svg> Download Postman Collection</a>
+        </p>
     </div>
 </div>
 <div class="row">
@@ -32,6 +39,9 @@
             Alcune risorse permettono di filtrare i risultati in base ai parametri GET che vengono passati.<br>
             I nomi di questi parametri sono sempre preceduti da un underscore "_", ad esempio:
             <pre><code class="html">{{\URL::to('/')}}/api/v1/images?_width=380</code></pre>
+        </p>
+        <p>
+            I dati sono sempre wrappati dentro a "data" e sono sempre accompagnati dal numero totale ("total") e dal codice Http della response.
         </p>
         <p>
             Tutte le risorse accettano 3 parametri GET comuni:
@@ -106,6 +116,13 @@
 
                 <div id="addresses" class="collapse" aria-labelledby="headingOne" data-parent="#accordionDocs">
                     <div class="card-body">
+                        <p>
+                            Request:
+                        </p>
+                        <pre><code class="html">{{\URL::to('/')}}/api/v1/addresses?_quantity=1</code></pre>
+                        <p>
+                            Response:
+                        </p>
                         <pre><code class="json"></code></pre>
                         <button class="refresh-request btn btn-gradient" onclick="getRequest('{{\URL::to('/')}}/api/v1/addresses?_quantity=1', 'addresses')"><svg class="i-reload" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2"></path>
@@ -122,6 +139,13 @@
                 </div>
                 <div id="books" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionDocs">
                     <div class="card-body">
+                        <p>
+                            Request:
+                        </p>
+                        <pre><code class="html">{{\URL::to('/')}}/api/v1/books?_quantity=1</code></pre>
+                        <p>
+                            Response:
+                        </p>
                         <pre><code class="json"></code></pre>
                         <button class="refresh-request btn btn-gradient" onclick="getRequest('{{\URL::to('/')}}/api/v1/books?_quantity=1', 'books')"><svg class="i-reload" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2"></path>
@@ -138,6 +162,13 @@
                 </div>
                 <div id="companies" class="collapse" aria-labelledby="headingThree" data-parent="#accordionDocs">
                     <div class="card-body">
+                        <p>
+                            Request:
+                        </p>
+                        <pre><code class="html">{{\URL::to('/')}}/api/v1/companies?_quantity=1</code></pre>
+                        <p>
+                            Response:
+                        </p>
                         <pre><code class="json"></code></pre>
                         <button class="refresh-request btn btn-gradient" onclick="getRequest('{{\URL::to('/')}}/api/v1/companies?_quantity=1', 'companies')"><svg class="i-reload" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2"></path>
@@ -154,6 +185,13 @@
                 </div>
                 <div id="credit_cards" class="collapse" aria-labelledby="headingFour" data-parent="#accordionDocs">
                     <div class="card-body">
+                        <p>
+                            Request:
+                        </p>
+                        <pre><code class="html">{{\URL::to('/')}}/api/v1/credit_cards?_quantity=1</code></pre>
+                        <p>
+                            Response:
+                        </p>
                         <pre><code class="json"></code></pre>
                         <button class="refresh-request btn btn-gradient" onclick="getRequest('{{\URL::to('/')}}/api/v1/credit_cards?_quantity=1', 'credit_cards')"><svg class="i-reload" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2"></path>
@@ -298,6 +336,13 @@
                 </div>
                 <div id="places" class="collapse" aria-labelledby="headingEight" data-parent="#accordionDocs">
                     <div class="card-body">
+                        <p>
+                            Request:
+                        </p>
+                        <pre><code class="html">{{\URL::to('/')}}/api/v1/places?_quantity=1</code></pre>
+                        <p>
+                            Response:
+                        </p>
                         <pre><code class="json"></code></pre>
                         <button class="refresh-request btn btn-gradient" onclick="getRequest('{{\URL::to('/')}}/api/v1/places?_quantity=1', 'places')"><svg class="i-reload" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2"></path>

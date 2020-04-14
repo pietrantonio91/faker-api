@@ -38,6 +38,10 @@ class Custom extends BaseResource
                             $response[$param] = 'http://placeimg.com/640/480/any';
                             break;
 
+                        case 'counter':
+                            $response[$param] = $this->counter;
+                            break;
+
                         default:
                             # code...
                             break;

@@ -35,6 +35,10 @@ class HomeController extends Controller
                         $example = 'http://placeimg.com/640/480/any';
                         break;
 
+                    case 'counter':
+                        $example = $faker->randomDigitNotNull();
+                        break;
+
                     default:
                         break;
                 }

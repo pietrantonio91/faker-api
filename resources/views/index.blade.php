@@ -30,12 +30,18 @@
                         <img src="/assets/img/symbol.png" style="width: 100px;" alt="">
                     </div>
                     <div class="text-center my-3 py-3">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fugit! Voluptatem
-                            voluptate magni minus accusantium atque! Illum, earum maiores, animi cumque molestias
-                            exercitationem pariatur, aliquid eveniet laborum velit dolore iusto. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ullam. Error nihil
-                            perspiciatis eligendi ex dolor sint debitis voluptatum? Vero harum quae blanditiis
-                            asperiores alias iste repellendus debitis necessitatibus quisquam.</p>
+                        <p>
+                            Faker API è un <strong>servizio API completamente gratuito</strong> che permette di generare <strong>dati fake</strong> in modo semplice e veloce, tutto tramite RESTful APIs. Non richiede nessuna iscrizione né l'utilizzo di token o altri sistemi di autenticazione.
+                        </p>
+                        <p>
+                            Ogni risorsa permette la localizzazione in lingua tramite il parametro "_locale" e consente inoltre di scegliere la quantità di dati da generare tramite il parametro "_quantity", fino a un massimo di <strong>1000 elementi</strong>.
+                        </p>
+                        <p>
+                            Nel paragrafo <a href="javascript:scrollTo('docs')">Documentazione</a> è possibile approfondire ogni risorsa. È inoltre disponibile la <strong>collection di Postman</strong> per poter utilizzare le nostre API tramite il noto client.
+                        </p>
+                        <p>
+                            Al fondo di questa pagina, nella sezione <a href="javascript:scrollTo('test')">Test</a>, sarà invece possibile testare le nostre API tramite un apposito form.
+                        </p>
                     </div>
                 </div>
             </div>

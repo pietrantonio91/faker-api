@@ -24,12 +24,15 @@
                     <img src="/assets/img/symbol.png" style="width: 100px;" alt="">
                 </div>
                 <div class="text-center my-3 py-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fugit! Voluptatem
-                        voluptate magni minus accusantium atque! Illum, earum maiores, animi cumque molestias
-                        exercitationem pariatur, aliquid eveniet laborum velit dolore iusto. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ullam. Error nihil
-                        perspiciatis eligendi ex dolor sint debitis voluptatum? Vero harum quae blanditiis
-                        asperiores alias iste repellendus debitis necessitatibus quisquam.</p>
+                    <p>
+                        <strong>Faker API</strong> consente di generare e scaricare file con <strong>dati fake</strong> per utilizzarli come più si preferisce: generare un database, creare una request per una API che stiamo sviluppando...
+                    </p>
+                    <p>
+                        In questa pagina è possibile scegliere il <strong>tipo di file</strong> che si vuole scaricare (CSV, JSON, SQL...), la <strong>quantità</strong> di dati da generare e configurare i vari campi del file.
+                    </p>
+                    <p>
+                        Nella <strong>configurazione dei campi</strong> sarà possibile scegliere tra svariati tipi di campo (gli stessi che si possono trovare nella parte di <a href="/#docs">Documentazione delle API</a> sotto la voce Custom).
+                    </p>
                 </div>
             </div>
         </div>
@@ -111,7 +114,7 @@
                                     <select name="" id="" v-model="file.fileType" :name="'fileType'" class="form-control">
                                         <option value="csv">CSV</option>
                                         <option value="tsv">TSV (with tab delimiter)</option>
-                                        {{-- <option value="xls">Excel</option> --}}
+                                        <option value="xls" disabled>Excel (coming soon)</option>
                                         <option value="sql">SQL</option>
                                         <option value="json">JSON</option>
                                     </select>

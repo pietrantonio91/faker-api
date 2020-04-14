@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                Created by Alessandro Pietrantonio - 2020
+                Made by Alessandro Pietrantonio for developers
             </div>
         </div>
     </div>
