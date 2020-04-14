@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Faker Api - Fake data CSV, Excel, SQL, JSON</title>
+    <meta name="description" content="Generate fake data and get by REST API.">
+    <meta name="keywords" content="faker,api,fake data,fake data api,faker api">
+    <meta name="author" content="Alessandro Pietrantonio">
 
     <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
 
