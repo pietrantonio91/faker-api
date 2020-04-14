@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col mt-5">
         <h2 class="text-center">
-            Documentazione
+            Docs
         </h2>
     </div>
 </div>
@@ -112,6 +112,7 @@
                     <h4 class="mb-0">
                         Addresses
                     </h4>
+
                 </div>
 
                 <div id="addresses" class="collapse" aria-labelledby="headingOne" data-parent="#accordionDocs">

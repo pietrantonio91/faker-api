@@ -51,7 +51,8 @@ h5 {
     color: #fff;
 }
 .btn-gradient:hover {
-    background: #00ff8f;
+    /* background: #00ff8f; */
+    background-color: #00e07e;
     color: #fff;
 }
 .color-gradient {
@@ -78,6 +79,16 @@ h5 {
     border: 0;
     cursor: pointer;
     color: #282828;
+    display: flex;
+    justify-content: space-between;
+}
+
+#accordionDocs .card-header.collapsed:after {
+    content: url(/assets/icons/chevron-bottom.svg);
+}
+
+#accordionDocs .card-header:after {
+    content: url(/assets/icons/chevron-top.svg);
 }
 
 #accordionDocs .card-header.collapsed:hover, #accordionDocs .card-header.collapsed:active {

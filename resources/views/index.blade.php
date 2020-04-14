@@ -4,9 +4,6 @@
     @parent
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="javascript:scrollTo('what')">What</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link" href="javascript:scrollTo('docs')">Docs</a>
         </li>
         <li class="nav-item">
@@ -24,7 +21,7 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1 mt-5">
                     <h2 class="text-center">
-                        Cos'è Faker API?
+                        What's Faker API?
                     </h2>
                     <div class="text-center my-3">
                         <img src="/assets/img/symbol.png" style="width: 100px;" alt="">
