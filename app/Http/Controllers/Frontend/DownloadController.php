@@ -174,6 +174,7 @@ class DownloadController extends Controller
 
     protected function downloadAndDeleteFile(string $file, string $filetype)
     {
+        ignore_user_abort(true);
         header('Content-Description: File Transfer');
         header('Content-Disposition: attachment; filename='.basename($file));
         header('Expires: 0');
@@ -183,9 +184,6 @@ class DownloadController extends Controller
         header("Content-Type: ".$filetype);
         readfile($file);
         // delete tmp file
-        ignore_user_abort(true);
-        if (connection_aborted()) {
-            unlink($file);
-        }
+        unlink($file);
     }
 }
