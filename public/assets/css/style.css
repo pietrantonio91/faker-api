@@ -6,6 +6,10 @@
     max-height: 70px;
 }
 
+.navbar-toggler {
+    margin: 0 auto;
+}
+
 .footer svg path {
     fill: #000;
 }
