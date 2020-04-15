@@ -10,24 +10,35 @@
     <meta name="keywords" content="faker,api,fake data,fake data api,faker api">
     <meta name="author" content="Alessandro Pietrantonio">
 
-    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {{-- Highlight js --}}
     <link rel="stylesheet" href="assets/css/agate.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163807379-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163807379-1');
+    </script>
+
 </head>
 
 <body>
 
-@include('parts.header')
+    @include('parts.header')
 
-@yield('content')
+    @yield('content')
 
-@include('parts.footer')
+    @include('parts.footer')
 
-<script src="assets/js/jquery-3.4.1.min.js" crossorigin="anonymous">
+    <script src="assets/js/jquery-3.4.1.min.js" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
