@@ -50,13 +50,29 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
+                                    <th></th>
                                     <th>Field name</th>
                                     <th>Field type</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-if="fields.length > 0" v-for="(field, index) in fields">
+                                <tr
+                                v-for="(field, index) in fields"
+                                :key="index"
+                                draggable="true"
+                                v-on:dragstart="dragStart(index, $event)"
+                                v-on:dragover.prevent
+                                v-on:drop="dragFinish(index, $event)"
+                                v-if="fields.length > 0"
+                                >
+                                    <td class="text-center text-muted" style="cursor:pointer">
+                                        <svg id="i-ellipsis-horizontal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <circle cx="7" cy="16" r="2" />
+                                            <circle cx="16" cy="16" r="2" />
+                                            <circle cx="25" cy="16" r="2" />
+                                        </svg>
+                                    </td>
                                     <td><input class="form-control" type="text" :name="'fields['+index+'][name]'" v-model="field.name" :key="index"></td>
                                     <td>
                                         <div class="d-flex justify-content-between">
@@ -77,29 +93,18 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td><input class="form-control" type="text" v-model="newField.name"></td>
-                                    <td>
-                                        <div class="d-flex justify-content-between">
-                                            << newField.type>>
-                                                <button type="button" class="btn btn-gradient btn-field"
-                                                    v-on:click="modalFieldTypes(null)">Field Type</button>
-                                                <input type="hidden" v-model="newField.type">
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <button  type="button" v-on:click="addField()" class="btn btn-success"
-                                            style="border-radius: 100%; height: 32px; width: 32px; padding: 0; border: 0; line-height: 5px;">
-                                            <svg id="i-plus" viewBox="0 0 32 32" width="16" height="16" fill="none"
-                                                stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2">
-                                                <path d="M16 2 L16 30 M2 16 L30 16"></path>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
+                        <div class="text-center">
+                            <button  type="button" v-on:click="addField()" class="btn btn-success"
+                                style="border-radius: 100%; height: 32px; width: 32px; padding: 0; border: 0; line-height: 5px;">
+                                <svg id="i-plus" viewBox="0 0 32 32" width="16" height="16" fill="none"
+                                    stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                    <path d="M16 2 L16 30 M2 16 L30 16"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div v-if="error" class="my-3 text-center text-danger">
                         << error>>
@@ -114,7 +119,8 @@
                                     <select name="" id="" v-model="file.fileType" :name="'fileType'" class="form-control">
                                         <option value="csv">CSV</option>
                                         <option value="tsv">TSV (with tab delimiter)</option>
-                                        <option value="xls" disabled>Excel (coming soon)</option>
+                                        <option value="xls">Excel .xls</option>
+                                        <option value="xlsx">Excel .xlsx</option>
                                         <option value="sql">SQL</option>
                                         <option value="json">JSON</option>
                                     </select>
@@ -144,6 +150,9 @@
                                 stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                 <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 16 L16 24 24 16"></path>
                             </svg> Download</button>
+                        <button type="button" v-on:click="openApiPreview" class="refresh-request btn btn-outline-gradient"><svg class="i-lightning" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M18 13 L26 2 8 13 14 19 6 30 24 19 Z"></path>
+                        </svg> Test API</button>
                     </div>
                 </div>
             </form>
@@ -191,130 +200,8 @@
 @parent
 
 <script>
-    hljs.initHighlightingOnLoad();
-
-        function scrollTo(id)
-        {
-            $('html,body').animate({
-                scrollTop: $('#'+id).offset().top - 100
-            }, 1000);
-        }
-
-        var vue = new Vue({
-            el: '#test',
-            delimiters: ["<<",">>"],
-            data: {
-                error: false,
-                file: {
-                    quantity: 100,
-                    fileType: 'csv',
-                    tableName: null
-                },
-                types: {!! json_encode($types) !!},
-                filteredTypes: {!! json_encode($types) !!},
-                fields: [
-                    {
-                        name: 'uuid',
-                        type: 'uuid'
-                    },
-                    {
-                        name: 'first_name',
-                        type: 'firstName'
-                    },
-                    {
-                        name: 'last_name',
-                        type: 'lastName'
-                    },
-                    {
-                        name: 'birthday',
-                        type: 'date'
-                    }
-                ],
-                newField: {
-                    name: '',
-                    type: ''
-                },
-                modalTypesOpen: false,
-                selectedField: false,
-                searchTypesInput: null
-            },
-            mounted() {
-                this.filteredTypes = this.types;
-            },
-            methods: {
-                removeField(index) {
-                    this.fields.splice(index, 1);
-                },
-                addField() {
-                    var self = this;
-                    if (this.newField.name == '') {
-                        this.setError('Scegli un nome per il nuovo campo');
-                    } else if (this.newField.type == '') {
-                        this.setError('Scegli un tipo per il nuovo campo');
-                    } else {
-                        this.fields.push(this.newField);
-                        this.newField = {
-                            name: '',
-                            type: ''
-                        };
-                    }
-                },
-                modalFieldTypes(field = null) {
-                    $('#modalChooseType').modal('show');
-                    this.selectedField = field;
-                },
-                searchTypes(e) {
-                    if (this.searchTypesInput !== null && this.searchTypesInput != '' && this.searchTypesInput !== undefined) {
-                        let newTypesList = [];
-                        for (let i = 0; i < this.types.length; i++) {
-                            const element = this.types[i];
-                            if(element.type.includes(this.searchTypesInput)) newTypesList.push(element);
-                        }
-                        this.filteredTypes = newTypesList;
-                    } else {
-                        this.filteredTypes = this.types;
-                    }
-                },
-                addType(type) {
-                    if (this.selectedField) {
-                        this.fields[this.selectedField].type = type;
-                    } else {
-                        this.newField.type = type;
-                    }
-                },
-                setError(text) {
-                    var self = this;
-                    this.error = text;
-                    setTimeout(() => {
-                        self.error = false;
-                    }, 2000);
-                },
-                download() {
-                    // controlli vari:
-                    // fields deve essere maggiore di 0
-                    if (this.fields.length < 1) {
-                        return this.setError('Scegli almeno un campo.');
-                    }
-                    for (let n = 0; n < this.fields.length; n++) {
-                        const element = this.fields[n];
-                        // se un campo non ha type o nome do errore
-                        if(element.name == '')
-                            return this.setError('Tutti campi devono avere un nome.');
-                        if(element.type == '')
-                            return this.setError('Tutti campi devono avere un tipo assegnato.');
-                    }
-                    // quantità max 1000
-                    if (this.file.quantity > 1000) {
-                        return this.setError('Il file può contenere al massimo 1000 righe.');
-                    }
-                    // quantità min 1
-                    if (this.file.quantity < 1) {
-                        return this.setError('Il file non può contenere meno di 1 riga.');
-                    }
-
-                    this.$refs.downloadFileForm.submit();
-                }
-            }
-        })
+    const TYPES = {!! json_encode($types) !!};
+    const API_URL = '{{\URL::to('/')}}/api/v1/custom?';
 </script>
+<script src="/assets/js/download-prepare.js"></script>
 @endsection

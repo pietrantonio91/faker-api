@@ -55,6 +55,17 @@ h5 {
     background-color: #00e07e;
     color: #fff;
 }
+.btn-outline-gradient {
+    background: transparent;
+    border-color: #00a1ff;
+    color: #00a1ff !important;
+}
+.btn-outline-gradient:hover {
+    background: #00ff8f;
+    background-color: #00ff8f;
+    border-color: #00ff8f;
+    color: #fff !important;
+}
 .color-gradient {
     background: linear-gradient(to right, #00ff8f, #00a1ff);
     -webkit-background-clip: text;
@@ -73,7 +84,7 @@ h5 {
     background-color: #eee;
 }
 
-#accordionDocs .card-header {
+.accordion .card-header {
     background: #f8f8f8;
     border-radius: 0;
     border: 0;
@@ -83,29 +94,29 @@ h5 {
     justify-content: space-between;
 }
 
-#accordionDocs .card-header.collapsed:after {
+.accordion .card-header.collapsed:after {
     content: url(/assets/icons/chevron-bottom.svg);
 }
 
-#accordionDocs .card-header:after {
+.accordion .card-header:after {
     content: url(/assets/icons/chevron-top.svg);
 }
 
-#accordionDocs .card-header.collapsed:hover, #accordionDocs .card-header.collapsed:active {
+.accordion .card-header.collapsed:hover, .accordion .card-header.collapsed:active {
     background: #f8f8f8;
 }
 
-#accordionDocs .card-header.collapsed {
+.accordion .card-header.collapsed {
     background: #fff;
 }
 
-#accordionDocs .card {
+.accordion .card {
     margin-top: 5px;
     border-radius: 0;
     border: 0;
 }
 
-#accordionDocs .card .card-body {
+.accordion .card .card-body {
     border-top: 5px solid #f8f8f8;
 }
 

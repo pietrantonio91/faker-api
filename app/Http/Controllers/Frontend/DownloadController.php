@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Custom;
 use Faker\Factory as Faker;
 use Illuminate\Http\Request;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xls;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class DownloadController extends Controller
 {
@@ -92,6 +95,10 @@ class DownloadController extends Controller
                 return $this->toXls($newRequest, $quantity);
                 break;
 
+            case 'xlsx':
+                return $this->toXlsx($newRequest, $quantity);
+                break;
+
             case 'json':
                 return $this->toJson($newRequest, $quantity);
                 break;
@@ -158,18 +165,44 @@ class DownloadController extends Controller
 
     protected function toXls($request, int $quantity)
     {
-        $faker = Faker::create();
-        $file = storage_path('tmp').'/fakerAPI_'.date('Y-m-d_H-i-s').'.xls';
-        $fhandle = fopen($file, "w") or die('Unable to open file!');
-        // header
-        fputcsv($fhandle, array_keys($request->all()), "\t");
-        for ($i=0; $i < $quantity; $i++) {
-            $row = (new Custom($request, $faker, null, $i+1))->toArray($request);
-            fputcsv($fhandle, $row, "\t");
-        }
-        fclose($fhandle);
+        $rows = $this->makeArray($request, $quantity);
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+        $sheet->fromArray($rows, NULL, 'A1');
 
-        $this->downloadAndDeleteFile($file, 'application/vnd.ms-excel; charset=UTF-16LE');
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment; filename=fakerAPI_'.date('Y-m-d_H-i-s').'.xls');
+        header('Cache-Control: max-age=0');
+
+        $writer = new Xls($spreadsheet);
+        $writer->save('php://output');
+    }
+
+    protected function toXlsx($request, int $quantity)
+    {
+        $rows = $this->makeArray($request, $quantity);
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+        $sheet->fromArray($rows, NULL, 'A1');
+
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment; filename=fakerAPI_'.date('Y-m-d_H-i-s').'.xlsx');
+        header('Cache-Control: max-age=0');
+
+        $writer = new Xlsx($spreadsheet);
+        $writer->save('php://output');
+    }
+
+    protected function makeArray($request, $quantity)
+    {
+        $faker = Faker::create();
+        $rows = [];
+        // header
+        $rows[] = array_keys($request->all());
+        for ($i=0; $i < $quantity; $i++) {
+            $rows[] = (new Custom($request, $faker, null, $i+1))->toArray($request);
+        }
+        return $rows;
     }
 
     protected function downloadAndDeleteFile(string $file, string $filetype)

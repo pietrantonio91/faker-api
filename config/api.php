@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'current_version' => env('CURRENT_VERSION', '1.0.0'),
     'response_limit_number' => 1000,
     'available_types' => [
         'number' => [
