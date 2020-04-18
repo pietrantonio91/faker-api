@@ -4,7 +4,7 @@
 @parent
 <ul class="navbar-nav">
     <li class="nav-item">
-        <a class="nav-link" href="/">Back to FakerAPI</a>
+        <a class="nav-link" href="/{{ app()->getLocale() }}">Back to FakerAPI</a>
     </li>
 </ul>
 @endsection
@@ -14,26 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 mt-5">
-                <h2 class="text-center">
-                    Genera dati fake e scaricali
-                </h2>
-                <h4 class="text-center text-muted">
-                    in formato CSV, Excel, JSON e SQL
-                </h4>
-                <div class="text-center my-3">
-                    <img src="/assets/img/symbol.png" style="width: 100px;" alt="">
-                </div>
-                <div class="text-center my-3 py-3">
-                    <p>
-                        <strong>Faker API</strong> consente di generare e scaricare file con <strong>dati fake</strong> per utilizzarli come più si preferisce: generare un database, creare una request per una API che stiamo sviluppando...
-                    </p>
-                    <p>
-                        In questa pagina è possibile scegliere il <strong>tipo di file</strong> che si vuole scaricare (CSV, JSON, SQL...), la <strong>quantità</strong> di dati da generare e configurare i vari campi del file.
-                    </p>
-                    <p>
-                        Nella <strong>configurazione dei campi</strong> sarà possibile scegliere tra svariati tipi di campo (gli stessi che si possono trovare nella parte di <a href="/#docs">Documentazione delle API</a> sotto la voce Custom).
-                    </p>
-                </div>
+                {!! trans('download.main') !!}
             </div>
         </div>
     </div>
@@ -45,14 +26,14 @@
                 <div class="col-md-8 offset-md-2 mt-5">
                     <div class="my-3">
                         <h4 class="text-center mb-5 color-gradient">
-                            Configurazione dei campi
+                            {!! trans('download.configuration.title') !!}
                         </h4>
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Field name</th>
-                                    <th>Field type</th>
+                                    <th>{{ trans('download.configuration.field_name') }}</th>
+                                    <th>{{ trans('download.configuration.field_type') }}</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -78,7 +59,7 @@
                                         <div class="d-flex justify-content-between">
                                             << field.type>>
                                                 <button  type="button" class="btn btn-gradient btn-field"
-                                                    v-on:click="modalFieldTypes(index)">Change</button>
+                                                    v-on:click="modalFieldTypes(index)">{{ trans('download.configuration.change') }}</button>
                                                 <input type="hidden" v-model="field.type" :name="'fields['+index+'][type]'" :key="index">
                                         </div>
                                     </td>
@@ -113,7 +94,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="align-items-end col-md-6 d-flex">
-                                    <strong>Tipo di file:</strong>
+                                    <strong>{{ trans('download.configuration.file_type') }}:</strong>
                                 </div>
                                 <div class="align-items-end col-md-6 d-flex">
                                     <select name="" id="" v-model="file.fileType" :name="'fileType'" class="form-control">
@@ -128,7 +109,7 @@
                             </div>
                             <div class="row" v-if="file.fileType == 'sql'" >
                                 <div class="align-items-end col-md-6 d-flex">
-                                    <strong>Nome tabella:</strong>
+                                    <strong>{{ trans('download.configuration.table_name') }}:</strong>
                                 </div>
                                 <div class="align-items-end col-md-6 d-flex">
                                     <input type="text" v-model="file.tableName" :name="'tableName'" class="form-control">
@@ -136,7 +117,7 @@
                             </div>
                             <div class="row">
                                 <div class="align-items-end col-md-6 d-flex">
-                                    <strong>Numero di righe:</strong>
+                                    <strong>{{ trans('download.configuration.rows_number') }}:</strong>
                                 </div>
                                 <div class="align-items-end col-md-6 d-flex">
                                     <input type="number" min="1" max="1000" v-model="file.quantity" :name="'quantity'" class="form-control">

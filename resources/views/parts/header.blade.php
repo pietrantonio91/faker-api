@@ -9,12 +9,20 @@
     <div class="collapse justify-content-between navbar-collapse show" id="navbarNav">
         @yield('navbar-nav')
         <div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input type="hidden" name="hosted_button_id" value="UAWNTS5F6W5TQ" />
-                <button class="btn btn-gradient" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!"
-                alt="Donate with PayPal button">☕ Offrimi un caffè!</button>
-            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item mr-3">
+                    @if(app()->getLocale() == 'it')
+                        <a class="nav-link" href="{{str_replace('it', 'en', \URL::full())}}">
+                            EN
+                        </a>
+                    @else
+                        <a class="nav-link" href="{{str_replace('en', 'it', \URL::full())}}">
+                            IT
+                        </a>
+                    @endif
+                </li>
+                <a href="https://paypal.me/pietrajr" target="_blank" class="btn btn-gradient" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">☕ Buy me a coffee!</a>
+            </ul>
         </div>
     </div>
 </nav>

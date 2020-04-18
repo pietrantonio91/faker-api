@@ -7,17 +7,8 @@
 </div>
 <div class="row">
     <div class="col-12 mt-5">
-        <p>
-            Non è richiesta nessuna chiave o token per l’utilizzo di Faker API. È un servizio gratuito e assolutamente
-            open-source.
-        </p>
-        <p>
-            <strong>Postman:</strong><br>
-            Scarica la collection di Postman (versione 2.1)<br>
-            <a href="/Faker API.postman_collection.json" class="btn btn-postman mt-3" download><svg class="i-import" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 16 L16 24 24 16"></path>
-            </svg> Download Postman Collection</a>
-        </p>
+        {!! trans('home.docs.intro') !!}
+        {!! trans('home.docs.postman') !!}
     </div>
 </div>
 <div class="row">
@@ -35,17 +26,7 @@
         <h4 id="basic-usage">
             <span class="color-gradient">Basic Usage</span> <a href="#basic-usage">#</a>
         </h4>
-        <p>
-            Alcune risorse permettono di filtrare i risultati in base ai parametri GET che vengono passati.<br>
-            I nomi di questi parametri sono sempre preceduti da un underscore "_", ad esempio:
-            <pre><code class="html">{{\URL::to('/')}}/api/v1/images?_width=380</code></pre>
-        </p>
-        <p>
-            I dati sono sempre wrappati dentro a "data" e sono sempre accompagnati dal numero totale ("total") e dal codice Http della response.
-        </p>
-        <p>
-            Tutte le risorse accettano 3 parametri GET comuni:
-        </p>
+        {!! trans('home.docs.basic_usage') !!}
         <ul>
             <li><a href="javascript:scrollTo('params_locale')">_locale</a></li>
             <li><a href="javascript:scrollTo('params_quantity')">_quantity</a></li>
@@ -54,46 +35,15 @@
         <h5 id="params_locale">
             _locale <a href="{{\URL::to('/')}}#params_locale">#</a>
         </h5>
-        <p>
-            Default: en_US
-        </p>
-        <p>
-            Il parametro indica la localizzazione dei risultati che si vogliono ottenere e accetta il formato di tipo
-            “it_IT”. Esempio:
-        </p>
-        <pre><code class="html">{{\URL::to('/')}}/api/v1/persons?_locale=fr_FR</code></pre>
-        <p>
-            Questo esempio restituisce delle persone con nomi appartenenti alla lingua francese.
-        </p>
+        {!! trans('home.docs._locale') !!}
         <h5 id="params_quantity">
             _quantity <a href="{{\URL::to('/')}}#params_quantity">#</a>
         </h5>
-        <p>
-            Default: 10
-        </p>
-        <p>
-            Max: 1000
-        </p>
-        <p>
-            Il parametro indica la quantità di risultati che si vogliono ottenere e accetta solo numeri interi. Se si
-            richiedono più di 1000 risultati il sistema restituisce comunque 1000 risultati. Esempio:
-        </p>
-        <pre><code class="html">{{\URL::to('/')}}/api/v1/companies?_quantity=5</code></pre>
-        <p>
-            Questo esempio restituisce 5 aziende.
-        </p>
+        {!! trans('home.docs._quantity') !!}
         <h5 id="params_seed">
             _seed <a href="{{\URL::to('/')}}#params_seed">#</a>
         </h5>
-        <p>
-            Default: null
-        </p>
-        <p>
-            Il parametro accetta un numero intero e consente di ottenere più volte gli stessi risultati. Quindi
-            eseguendo la stessa richiesta con il parametro _seed valorizzato con un numero (es. 12456) i risultati non
-            cambieranno mai. Esempio:
-        </p>
-        <pre><code class="html">{{\URL::to('/')}}/api/v1/companies?_seed=8665</code></pre>
+        {!! trans('home.docs._seed') !!}
     </div>
 </div>
 <div class="row" id="resources">
@@ -115,7 +65,7 @@
 
                 </div>
 
-                <div id="addresses" class="collapse" aria-labelledby="headingOne" data-parent="#accordionDocs">
+                <div id="addresses" class="collapse" aria-labelledby="headingOne" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Request:
@@ -138,7 +88,7 @@
                         Books
                     </h4>
                 </div>
-                <div id="books" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionDocs">
+                <div id="books" class="collapse" aria-labelledby="headingTwo" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Request:
@@ -161,7 +111,7 @@
                         Companies
                     </h4>
                 </div>
-                <div id="companies" class="collapse" aria-labelledby="headingThree" data-parent="#accordionDocs">
+                <div id="companies" class="collapse" aria-labelledby="headingThree" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Request:
@@ -184,7 +134,7 @@
                         Credit Cards
                     </h4>
                 </div>
-                <div id="credit_cards" class="collapse" aria-labelledby="headingFour" data-parent="#accordionDocs">
+                <div id="credit_cards" class="collapse" aria-labelledby="headingFour" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Request:
@@ -207,7 +157,7 @@
                         Images
                     </h4>
                 </div>
-                <div id="images" class="collapse" aria-labelledby="headingSix" data-parent="#accordionDocs">
+                <div id="images" class="collapse" aria-labelledby="headingSix" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Additional optional parameters:
@@ -273,7 +223,7 @@
                         Persons
                     </h4>
                 </div>
-                <div id="persons" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionDocs">
+                <div id="persons" class="collapse" aria-labelledby="headingSeven" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Additional optional parameters:
@@ -339,7 +289,7 @@
                         Places
                     </h4>
                 </div>
-                <div id="places" class="collapse" aria-labelledby="headingEight" data-parent="#accordionDocs">
+                <div id="places" class="collapse" aria-labelledby="headingEight" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Request:
@@ -362,7 +312,7 @@
                         Products
                     </h4>
                 </div>
-                <div id="products" class="collapse" aria-labelledby="headingNine" data-parent="#accordionDocs">
+                <div id="products" class="collapse" aria-labelledby="headingNine" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Additional optional parameters:
@@ -437,7 +387,7 @@
                         Texts
                     </h4>
                 </div>
-                <div id="texts" class="collapse" aria-labelledby="headingTen" data-parent="#accordionDocs">
+                <div id="texts" class="collapse" aria-labelledby="headingTen" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Additional optional parameters:
@@ -485,7 +435,7 @@
                         Users
                     </h4>
                 </div>
-                <div id="users" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionDocs">
+                <div id="users" class="collapse" aria-labelledby="headingEleven" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
                         <p>
                             Additional optional parameters:
@@ -533,21 +483,9 @@
                         Custom
                     </h4>
                 </div>
-                <div id="custom" class="collapse" aria-labelledby="headingFive" data-parent="#accordionDocs">
+                <div id="custom" class="collapse" aria-labelledby="headingFive" {{--data-parent="#accordionDocs"--}}>
                     <div class="card-body">
-                        <p>
-                            Questa risorsa è l'unica che non segue le regole delle altre risorse.<br>I tre parametri comuni (_quantity, _locale, _seed) hanno lo stesso utilizzo delle altre risorse ma la request di questa risorsa deve essere gestita in modo diverso.
-                        </p>
-                        <p>
-                            Le chiamate a questa risorsa accettano dei parametri custom secondo uno schema:
-                        </p>
-                        <pre><code class="html"><i>myCustomName1</i>=<b>customType1</b>&<i>myCustomName2</i>=<b>customType2</b><br></code></pre>
-                        <p>
-                            dove <i>myCustomName1</i> e <i>myCustomName2</i> sono i nomi che voglio dare ai parametri della mia risorsa custom, e <b>customType1</b> e <b>customType2</b> sono uno dei tipi di parametro accettati elencati qui sotto.
-                        </p>
-                        <p>
-                            Essa consente di costruire una propria risorsa ad hoc usando i tipi di parametro qui elencati:
-                        </p>
+                        {!! trans('home.docs.resources.custom') !!}
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>

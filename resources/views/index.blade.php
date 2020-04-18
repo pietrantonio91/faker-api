@@ -13,7 +13,7 @@
             <a class="nav-link" href="javascript:scrollTo('changelogs')">Changelogs</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/fake-data-csv">Fake data CSV</a>
+            <a class="nav-link" href="/{{ app()->getLocale() }}/fake-data-csv">Fake data CSV</a>
         </li>
     </ul>
 @endsection
@@ -30,22 +30,11 @@
                         <img src="/assets/img/symbol.png" style="width: 100px;" alt="">
                     </div>
                     <div class="text-center my-3 py-3">
-                        <p>
-                            Faker API è un <strong>servizio API completamente gratuito</strong> che permette di generare <strong>dati fake</strong> in modo semplice e veloce, tutto tramite RESTful APIs. Non richiede nessuna iscrizione né l'utilizzo di token o altri sistemi di autenticazione.
-                        </p>
-                        <p>
-                            Ogni risorsa permette la localizzazione in lingua tramite il parametro "_locale" e consente inoltre di scegliere la quantità di dati da generare tramite il parametro "_quantity", fino a un massimo di <strong>1000 elementi</strong>.
-                        </p>
-                        <p>
-                            Nel paragrafo <a href="javascript:scrollTo('docs')">Documentazione</a> è possibile approfondire ogni risorsa. È inoltre disponibile la <strong>collection di Postman</strong> per poter utilizzare le nostre API tramite il noto client.
-                        </p>
-                        <p>
-                            Al fondo di questa pagina, nella sezione <a href="javascript:scrollTo('test')">Test</a>, sarà invece possibile testare le nostre API tramite un apposito form.
-                        </p>
+                        {!! trans('home.what.main') !!}
                     </div>
                     <div class="text-center my-3 py-3">
                         <p class="h5">
-                            Current version: <a href="javascript:scrollTo('changelogs')" class="h4">{{ config('api.current_version') }}</a>
+                            {{ trans('home.what.current') }} <a href="javascript:scrollTo('changelogs')" class="h4">{{ config('api.current_version') }}</a>
                         </p>
                     </div>
                 </div>
@@ -92,6 +81,13 @@
                 scrollTop: $('#'+id).offset().top - 100
             }, 1000);
         }
+
+        $('.collapse').on('shown.bs.collapse', function (e) {
+            var $panel = $(this).closest('.card');
+            $('html,body').animate({
+                scrollTop: $panel.offset().top - 100
+            }, 500);
+        });
 
         $('#test_resource').change(function(e) {
             changeTestResource()

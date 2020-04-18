@@ -77,9 +77,9 @@ $app->configure('api');
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+$app->routeMiddleware([
+    'locale' => App\Http\Middleware\Language::class,
+]);
 
 /*
 |--------------------------------------------------------------------------
