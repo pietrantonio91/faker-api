@@ -3,33 +3,33 @@
 return [
 
     'main' => '<h2 class="text-center">
-            Genera dati fake e scaricali
+            Generate fate data and download
         </h2>
         <h4 class="text-center text-muted">
-            in formato CSV, Excel, JSON e SQL
+            format: CSV, Excel, JSON e SQL
         </h4>
         <div class="text-center my-3">
             <img src="'.\URL::to('/').'/assets/img/symbol.png" style="width: 100px;" alt="">
         </div>
         <div class="text-center my-3 py-3">
             <p>
-                <strong>Faker API</strong> consente di generare e scaricare file con <strong>dati fake</strong> per utilizzarli come più si preferisce: generare un database, creare una request per una API che stiamo sviluppando...
+                <strong>Faker API</strong> allows to generate and download files with <strong>fake data</strong> to use them as you prefer: populating databases, creating API request for another service...
             </p>
             <p>
-                In questa pagina è possibile scegliere il <strong>tipo di file</strong> che si vuole scaricare (CSV, JSON, SQL...), la <strong>quantità</strong> di dati da generare e configurare i vari campi del file.
+                From this page it\'s possible to choose the <strong>file type</strong> we want to download (CSV, JSON, SQL, Excel), the <strong>number of rows</strong> to generate and to configure each file field.
             </p>
             <p>
-                Nella <strong>configurazione dei campi</strong> sarà possibile scegliere tra svariati tipi di campo (gli stessi che si possono trovare nella parte di <a href="/it/#docs">Documentazione delle API</a> sotto la voce Custom).
+                From <strong>fields configuration</strong> you will be able to choose between different types of field (the same you can find in the <a href="/en/#docs">APIs Docs</a> below Custom).
             </p>
         </div>',
     'configuration' => [
-        'title' => 'Configurazione dei campi',
+        'title' => 'Fields configuration',
         'field_name' => 'Field name',
         'field_type' => 'Field type',
-        'file_type' => 'Tipo di file',
-        'table_name' => 'Nome della tabella',
-        'rows_number' => 'Numero di righe',
-        'change' => 'Cambia',
+        'file_type' => 'File format',
+        'table_name' => 'Table name',
+        'rows_number' => 'Number of rows',
+        'change' => 'Change',
 
     ]
 
