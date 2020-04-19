@@ -32,7 +32,7 @@
                 link += (key.charAt(ltr))
                 }
             }
-            document.getElementById('cntctm').setAttribute('href', link);
+            document.getElementById('cntctm').setAttribute('href', 'mailto:'+link);
         }
         </script><noscript>Sorry, you need Javascript on to email me.</noscript>
 
