@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                Made for developers by Alessandro Pietrantonio - <a href="javascript:emailMe()" id="cntctm" style="font-size: inherit;">Contact me</a>
+                Made for developers by Alessandro Pietrantonio - <a href="" id="cntctm" style="font-size: inherit;">Contact me</a>
             </div>
         </div>
     </div>
@@ -12,6 +12,7 @@
     @parent
 
     <script type="text/javascript" language="javascript">
+        emailMe();
         // Email obfuscator script 2.1 by Tim Williams, University of Arizona
         // Random encryption key feature coded by Andrew Moulden
         // This code is freeware provided these four comment lines remain intact
@@ -31,7 +32,7 @@
                 link += (key.charAt(ltr))
                 }
             }
-            window.location.href = 'mailto:'+link;
+            document.getElementById('cntctm').setAttribute('href', link);
         }
         </script><noscript>Sorry, you need Javascript on to email me.</noscript>
 
