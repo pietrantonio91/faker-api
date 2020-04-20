@@ -39,6 +39,14 @@ class HomeController extends Controller
                         $example = $faker->randomDigitNotNull();
                         break;
 
+                    case 'boolean_digit':
+                        $example = rand(0,1);
+                        break;
+
+                    case 'null':
+                        $example = null;
+                        break;
+
                     default:
                         break;
                 }

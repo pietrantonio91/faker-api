@@ -1,5 +1,11 @@
 @extends('layout')
 
+@section('meta')
+    <title>Faker Api - Generate Fake data by API requests</title>
+    <meta name="description" content="Generate fake data and get by REST API requests.">
+    <meta name="keywords" content="faker,api,fake data,fake data api,faker api">
+@endsection
+
 @section('navbar-nav')
     @parent
     <ul class="navbar-nav">
@@ -13,7 +19,7 @@
             <a class="nav-link" href="javascript:scrollTo('changelogs')">Changelogs</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/{{ app()->getLocale() }}/fake-data-csv">Fake data CSV</a>
+            <a class="nav-link" href="/{{ app()->getLocale() }}/fake-data-download">Fake data Download</a>
         </li>
     </ul>
 @endsection

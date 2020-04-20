@@ -1,5 +1,11 @@
 @extends('layout')
 
+@section('meta')
+    <title>Faker Api Download - Download Fake data CSV, Excel, SQL, JSON</title>
+    <meta name="description" content="Generate fake data and download to your preferred file format: CSV, Excel, SQL, JSON.">
+    <meta name="keywords" content="faker,api,fake data,fake data api,faker api,json,csv,excel,sql">
+@endsection
+
 @section('navbar-nav')
 @parent
 <ul class="navbar-nav">

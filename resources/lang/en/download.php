@@ -3,7 +3,7 @@
 return [
 
     'main' => '<h2 class="text-center">
-            Generate fate data and download
+            Generate fake data and download
         </h2>
         <h4 class="text-center text-muted">
             format: CSV, Excel, JSON e SQL
@@ -13,7 +13,7 @@ return [
         </div>
         <div class="text-center my-3 py-3">
             <p>
-                <strong>Faker API</strong> allows to generate and download files with <strong>fake data</strong> to use them as you prefer: populating databases, creating API request for another service...
+                <strong>Faker API</strong> allows to generate and download files with <strong>fake data</strong> to use as you prefer: populating databases, creating API requests for another service...
             </p>
             <p>
                 From this page it\'s possible to choose the <strong>file type</strong> we want to download (CSV, JSON, SQL, Excel), the <strong>number of rows</strong> to generate and to configure each file field.

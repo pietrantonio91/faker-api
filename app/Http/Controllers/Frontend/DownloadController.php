@@ -113,7 +113,7 @@ class DownloadController extends Controller
                 break;
         }
 
-        return redirect('/fake-data-csv');
+        return redirect('/fake-data-download');
     }
 
     protected function toCsv($request, int $quantity, string $delimiter = ',')

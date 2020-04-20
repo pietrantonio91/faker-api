@@ -101,6 +101,18 @@ return [
         ],
         'counter' => [
             'method' => 'special'
-        ]
+        ],
+        'boolean' => [
+            'method' => 'boolean'
+        ],
+        'boolean_digit' => [
+            'method' => 'special'
+        ],
+        'company_name' => [
+            'method' => 'company'
+        ],
+        'null' => [
+            'method' => 'special'
+        ],
     ]
 ];

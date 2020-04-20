@@ -40,16 +40,16 @@ $router->group(['prefix' => 'api', 'namespace' => 'Api'], function() use ($route
 
 $router->group(['middleware' => 'locale'], function() use ($router) {
     $router->get('/', 'Frontend\\HomeController@index');
-    $router->get('/fake-data-csv', 'Frontend\\DownloadController@index');
+    $router->get('/fake-data-download', 'Frontend\\DownloadController@index');
     $router->post('/download', 'Frontend\\DownloadController@download');
 });
 $router->group(['prefix' => 'en', 'middleware' => 'locale'], function() use ($router) {
     $router->get('/', 'Frontend\\HomeController@index');
-    $router->get('/fake-data-csv', 'Frontend\\DownloadController@index');
+    $router->get('/fake-data-download', 'Frontend\\DownloadController@index');
     $router->post('/download', 'Frontend\\DownloadController@download');
 });
 $router->group(['prefix' => 'it', 'middleware' => 'locale'], function() use ($router) {
     $router->get('/', 'Frontend\\HomeController@index');
-    $router->get('/fake-data-csv', 'Frontend\\DownloadController@index');
+    $router->get('/fake-data-download', 'Frontend\\DownloadController@index');
     $router->post('/download', 'Frontend\\DownloadController@download');
 });

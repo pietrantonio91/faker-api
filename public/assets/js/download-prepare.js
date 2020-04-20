@@ -78,7 +78,8 @@ var vue = new Vue({
                 let newTypesList = [];
                 for (let i = 0; i < this.types.length; i++) {
                     const element = this.types[i];
-                    if (element.type.includes(this.searchTypesInput)) newTypesList.push(element);
+                    const string = element.type.toLowerCase();
+                    if (string.includes(this.searchTypesInput.toLowerCase())) newTypesList.push(element);
                 }
                 this.filteredTypes = newTypesList;
             } else {
@@ -86,7 +87,7 @@ var vue = new Vue({
             }
         },
         addType(type) {
-            if (this.selectedField) {
+            if (this.selectedField !== null) {
                 this.fields[this.selectedField].type = type;
             } else {
                 this.newField.type = type;

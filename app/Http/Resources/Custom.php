@@ -42,6 +42,14 @@ class Custom extends BaseResource
                             $response[$param] = $this->counter;
                             break;
 
+                        case 'boolean_digit':
+                            $response[$param] = rand(0,1);
+                            break;
+
+                        case 'null':
+                            $response[$param] = null;
+                            break;
+
                         default:
                             # code...
                             break;

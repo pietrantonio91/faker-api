@@ -3,16 +3,16 @@
 return [
     'what' => [
         'main' => "<p>
-                Faker API it's a collection of <strong>completely free APIs</strong> that helps web developers and web designers generate <strong>fake data</strong> in a fast adn easy way. No registration is required. No tokens, no authentication.
+                Faker API it's a collection of <strong>completely free APIs</strong> that helps web developers and web designers generate <strong>fake data</strong> in a fast and easy way. No registration is required. No tokens, no authentication.
             </p>
             <p>
                 Every resource allows to choose the API language by \"_locale\" parameter and also allows to select the number of rows requested by \"_quantity\" parameter. <strong>Max 1000 rows</strong>.
             </p>
             <p>
-                Read the <a href=\"javascript:scrollTo('docs')\">Docs</a> to read more about every resource. In addition, it's available the <strong>Postman collection</strong> to use these APIs directly in the well-known client.
+                Check the <a href=\"javascript:scrollTo('docs')\">Docs</a> to read more about every resource. In addition, it's available the <strong>Postman collection</strong> to use these APIs directly in the well-known client.
             </p>
             <p>
-                At the end of this page yu'll find the <a href=\"javascript:scrollTo('test')\">Test</a> section, where you can test our APIs throug the specific form.
+                At the end of this page you will find the <a href=\"javascript:scrollTo('test')\">Test</a> section, where you can test our APIs throug the specific form.
             </p>",
         'current' => 'Current version:'
     ],
@@ -33,7 +33,7 @@ return [
                 <pre><code class="html">'.\URL::to('/').'/api/v1/images?_width=380</code></pre>
             </p>
             <p>
-                Data are always wrapped inside "data" and are always returned with the total number of rows ("total") and with the Http response code.
+                Data are always wrapped inside "data" and are always returned with the total number of rows ("total") and with the Http response "code".
             </p>
             <p>
                 Every resource accepts 3 GET common parameters:
@@ -46,7 +46,7 @@ return [
             </p>
             <pre><code class="html">'.\URL::to('/').'/api/v1/persons?_locale=fr_FR</code></pre>
             <p>
-                This example return people with french names.
+                This example returns people with french names.
             </p>',
         '_quantity' => '<p>
                 Default: 10
@@ -59,13 +59,13 @@ return [
             </p>
             <pre><code class="html">'.\URL::to('/').'/api/v1/companies?_quantity=5</code></pre>
             <p>
-                This example return 5 companies.
+                This example returns 5 companies.
             </p>',
         '_seed' => '<p>
                 Default: null
             </p>
             <p>
-                This parameter accept an integer and allowas to get always the same results. So, executing the same request with _seed parameter set to the same number (ex. 12345) the results will never change. Example:
+                This parameter accept an integer and allows to get always the same results. So, executing the same request with _seed parameter set to the same number (ex. 12345) the results will never change. Example:
             </p>
             <pre><code class="html">'.\URL::to('/').'/api/v1/companies?_seed=12456</code></pre>',
         'resources' => [
@@ -81,7 +81,7 @@ return [
                     where <i>myCustomName1</i> and <i>myCustomName2</i> are my custom parameters names, and <b>customType1</b> and <b>customType2</b> are my custom parameters types. See below the allowed types.
                 </p>
                 <p>
-                    This allows to make a custom ad hoc resource, using type parameters listed below:
+                    This allows to generate a custom ad hoc resource, using type parameters listed below:
                 </p>'
         ]
     ]
