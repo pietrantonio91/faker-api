@@ -153,7 +153,7 @@
                     <div class="row">
                         <div class="col">
                             <input type="text" v-model="searchTypesInput" class="form-control"
-                                placeholder="Type to search" v-on:keydown="searchTypes">
+                                placeholder="Type to search" v-on:keyup="searchTypes">
                         </div>
                     </div>
                 </div>

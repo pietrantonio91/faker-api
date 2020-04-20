@@ -73,7 +73,7 @@ var vue = new Vue({
             $('#modalChooseType').modal('show');
             this.selectedField = field;
         },
-        searchTypes(e) {
+        searchTypes() {
             if (this.searchTypesInput !== null && this.searchTypesInput != '' && this.searchTypesInput !== undefined) {
                 let newTypesList = [];
                 for (let i = 0; i < this.types.length; i++) {
@@ -92,6 +92,8 @@ var vue = new Vue({
             } else {
                 this.newField.type = type;
             }
+            this.searchTypesInput = null;
+            this.searchTypes();
         },
         setError(text) {
             var self = this;
