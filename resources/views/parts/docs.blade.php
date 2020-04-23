@@ -175,7 +175,7 @@
                                     <tr>
                                         <td>_type</td>
                                         <td>
-                                            any, animals, architecture, nature, people, tech, kittens
+                                            any, animals, architecture, nature, people, tech, kittens, pokemon
                                         </td>
                                         <td>
                                             <pre>_type=architecture</pre>

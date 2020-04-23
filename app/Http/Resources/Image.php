@@ -11,7 +11,8 @@ class Image extends BaseResource
         'nature',
         'people',
         'tech',
-        'kittens'
+        'kittens',
+        'pokemon'
     ];
 
     /**
@@ -33,6 +34,11 @@ class Image extends BaseResource
             $x = $width ?? $this->faker->randomDigitNotNull().'00';
             $y = $height ?? $this->faker->randomDigitNotNull().'00';
             $url = 'https://placekitten.com/'.$x.'/'.$y;
+        }
+        if ($type == 'pokemon') {
+            $x = $width ?? $this->faker->randomDigitNotNull().'00';
+            $y = $height ?? $this->faker->randomDigitNotNull().'00';
+            $url = 'https://lorempokemon.fakerapi.it/pokemon/'.$x.'/'.$y;
         }
 
         return [

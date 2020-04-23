@@ -47,6 +47,12 @@ class HomeController extends Controller
                         $example = null;
                         break;
 
+                    case 'pokemon':
+                        $pokemons = config('pokemon_list');
+                        shuffle($pokemons);
+                        $example = ucfirst($pokemons[0]);
+                        break;
+
                     default:
                         break;
                 }

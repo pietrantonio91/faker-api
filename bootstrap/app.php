@@ -61,6 +61,7 @@ $app->singleton(
 
 $app->configure('app');
 $app->configure('api');
+$app->configure('pokemon_list');
 
 /*
 |--------------------------------------------------------------------------

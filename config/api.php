@@ -114,5 +114,8 @@ return [
         'null' => [
             'method' => 'special'
         ],
+        'pokemon' => [
+            'method' => 'special'
+        ],
     ]
 ];

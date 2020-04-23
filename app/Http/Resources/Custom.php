@@ -50,6 +50,12 @@ class Custom extends BaseResource
                             $response[$param] = null;
                             break;
 
+                        case 'pokemon':
+                            $pokemons = config('pokemon_list');
+                            shuffle($pokemons);
+                            $response[$param] = ucfirst($pokemons[0]);
+                            break;
+
                         default:
                             # code...
                             break;
