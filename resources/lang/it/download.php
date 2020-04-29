@@ -29,6 +29,7 @@ return [
         'file_type' => 'Tipo di file',
         'table_name' => 'Nome della tabella',
         'rows_number' => 'Numero di righe',
+        'locale' => 'Locale (lingua)',
         'change' => 'Cambia',
 
     ]

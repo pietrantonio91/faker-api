@@ -29,8 +29,8 @@ return [
         'file_type' => 'File format',
         'table_name' => 'Table name',
         'rows_number' => 'Number of rows',
+        'locale' => 'Locale',
         'change' => 'Change',
-
     ]
 
 ];

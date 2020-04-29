@@ -129,6 +129,18 @@
                                     <input type="number" min="1" max="1000" v-model="file.quantity" :name="'quantity'" class="form-control">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="align-items-end col-md-6 d-flex">
+                                    <strong>{{ trans('download.configuration.locale') }}:</strong>
+                                </div>
+                                <div class="align-items-end col-md-6 d-flex">
+                                    <select :name="'locale'" id="" v-model="file.locale" class="form-control">
+                                    @foreach(config('api.available_locales') as $locale)
+                                        <option value="{{ $locale }}">{{ $locale }}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="my-3 mt-5 text-center">

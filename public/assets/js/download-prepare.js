@@ -18,7 +18,8 @@ var vue = new Vue({
         file: {
             quantity: 100,
             fileType: 'csv',
-            tableName: null
+            tableName: null,
+            locale: 'en_US'
         },
         types: TYPES,
         filteredTypes: TYPES,
@@ -138,7 +139,7 @@ var vue = new Vue({
         },
         openApiPreview() {
             if (this.checkFields()) {
-                let url = API_URL+'_quantity='+this.file.quantity+'&';
+                let url = API_URL+'_quantity='+this.file.quantity+'&_locale='+this.file.locale+'&';
                 for (let i = 0; i < this.fields.length; i++) {
                     const element = this.fields[i];
                     url += element.name+'='+element.type;

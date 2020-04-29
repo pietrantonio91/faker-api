@@ -74,6 +74,7 @@ class DownloadController extends Controller
     {
         $quantity = $request->quantity;
         $fileType = $request->fileType;
+        $locale = @$request->locale;
 
         $newRequest = new Request;
         $fields = [];
@@ -84,23 +85,23 @@ class DownloadController extends Controller
 
         switch ($fileType) {
             case 'csv':
-                return $this->toCsv($newRequest, $quantity);
+                return $this->toCsv($newRequest, $quantity, $locale);
                 break;
 
             case 'tsv':
-                return $this->toCsv($newRequest, $quantity, "\t");
+                return $this->toCsv($newRequest, $quantity, $locale, "\t");
                 break;
 
             case 'xls':
-                return $this->toXls($newRequest, $quantity);
+                return $this->toXls($newRequest, $quantity, $locale);
                 break;
 
             case 'xlsx':
-                return $this->toXlsx($newRequest, $quantity);
+                return $this->toXlsx($newRequest, $quantity, $locale);
                 break;
 
             case 'json':
-                return $this->toJson($newRequest, $quantity);
+                return $this->toJson($newRequest, $quantity, $locale);
                 break;
 
             case 'sql':
@@ -116,9 +117,9 @@ class DownloadController extends Controller
         return redirect('/fake-data-download');
     }
 
-    protected function toCsv($request, int $quantity, string $delimiter = ',')
+    protected function toCsv($request, int $quantity, string $locale = 'en_US', string $delimiter = ',')
     {
-        $faker = Faker::create();
+        $faker = Faker::create($locale);
         $file = storage_path('tmp').'/fakerAPI_'.date('Y-m-d_H-i-s').'.csv';
         $fhandle = fopen($file, "w") or die('Unable to open file!');
         // header
@@ -132,9 +133,9 @@ class DownloadController extends Controller
         $this->downloadAndDeleteFile($file, 'text/csv');
     }
 
-    protected function toJson($request, int $quantity)
+    protected function toJson($request, int $quantity, string $locale = 'en_US')
     {
-        $faker = Faker::create();
+        $faker = Faker::create($locale);
         $file = storage_path('tmp').'/fakerAPI_'.date('Y-m-d_H-i-s').'.json';
         $fhandle = fopen($file, "w") or die('Unable to open file!');
         $rows = [];
@@ -147,9 +148,9 @@ class DownloadController extends Controller
         $this->downloadAndDeleteFile($file, 'application/json');
     }
 
-    protected function toSql($request, int $quantity, string $tableName = 'table_name')
+    protected function toSql($request, int $quantity, string $locale = 'en_US', string $tableName = 'table_name')
     {
-        $faker = Faker::create();
+        $faker = Faker::create($locale);
         $file = storage_path('tmp').'/fakerAPI_'.date('Y-m-d_H-i-s').'.sql';
         $fhandle = fopen($file, "w") or die('Unable to open file!');
         $sql = '';
@@ -163,9 +164,9 @@ class DownloadController extends Controller
         $this->downloadAndDeleteFile($file, 'application/octet-stream');
     }
 
-    protected function toXls($request, int $quantity)
+    protected function toXls($request, int $quantity, string $locale = 'en_US')
     {
-        $rows = $this->makeArray($request, $quantity);
+        $rows = $this->makeArray($request, $quantity, $locale);
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
         $sheet->fromArray($rows, NULL, 'A1');
@@ -178,9 +179,9 @@ class DownloadController extends Controller
         $writer->save('php://output');
     }
 
-    protected function toXlsx($request, int $quantity)
+    protected function toXlsx($request, int $quantity, string $locale = 'en_US')
     {
-        $rows = $this->makeArray($request, $quantity);
+        $rows = $this->makeArray($request, $quantity, $locale);
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
         $sheet->fromArray($rows, NULL, 'A1');
@@ -193,9 +194,9 @@ class DownloadController extends Controller
         $writer->save('php://output');
     }
 
-    protected function makeArray($request, $quantity)
+    protected function makeArray($request, $quantity, $locale)
     {
-        $faker = Faker::create();
+        $faker = Faker::create($locale);
         $rows = [];
         // header
         $rows[] = array_keys($request->all());
