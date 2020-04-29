@@ -32,13 +32,13 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_0_1"
+                <div class="card-header collapsed" data-toggle="collapse" data-target="#changelogs-1_0_1"
                     aria-expanded="false" aria-controls="changelogs-1_0_1">
                     <h4 class="mb-0">
                         1.0.1
                     </h4>
                 </div>
-                <div id="changelogs-1_0_1" class="collapse show" data-parent="#accordionChangelogs">
+                <div id="changelogs-1_0_1" class="collapse" data-parent="#accordionChangelogs">
                     <div class="card-body">
                         <p>
                             Date of release: 14 April 2020
