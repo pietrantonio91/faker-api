@@ -12,6 +12,29 @@
                 <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_0_1"
                     aria-expanded="false" aria-controls="changelogs-1_0_1">
                     <h4 class="mb-0">
+                        1.0.2
+                    </h4>
+                </div>
+                <div id="changelogs-1_0_1" class="collapse show" data-parent="#accordionChangelogs">
+                    <div class="card-body">
+                        <p>
+                            Date of release: 23 April 2020
+                        </p>
+                        <ul>
+                            <li>
+                                Added "pokemon" type to Custom resource
+                            </li>
+                            <li>
+                                Added Pokémon images to Image resource
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_0_1"
+                    aria-expanded="false" aria-controls="changelogs-1_0_1">
+                    <h4 class="mb-0">
                         1.0.1
                     </h4>
                 </div>
