@@ -38,6 +38,9 @@
                     <div class="text-center my-3 py-3">
                         Sorry, the page you are looking for was not found.
                     </div>
+                    <div class="text-center my-3 py-3">
+                        <a class="btn btn-gradient" href="/">Back home</a>
+                    </div>
                 </div>
             </div>
         </div>
