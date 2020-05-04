@@ -74,9 +74,9 @@ $app->configure('pokemon_list');
 |
 */
 
-// $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+]);
 
 $app->routeMiddleware([
     'locale' => App\Http\Middleware\Language::class,
