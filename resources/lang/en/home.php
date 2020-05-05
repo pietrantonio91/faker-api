@@ -28,7 +28,7 @@ return [
             </svg> Download Postman Collection</a>
             </p>',
         'basic_usage' => '<p>
-                Some resource allows to filter data by GET parameters.<br>
+                Some resources allows to filter data by GET parameters.<br>
                 The names of these parameters are always preceded by an underscore character "_", for example:
                 <pre><code class="html">'.\URL::to('/').'/api/v1/images?_width=380</code></pre>
             </p>
