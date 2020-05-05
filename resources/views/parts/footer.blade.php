@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                Made for developers by Alessandro Pietrantonio - <a href="" id="cntctm" style="font-size: inherit;">Contact me</a>
+                Made for developers by Alessandro Pietrantonio - <a href="" id="cntctm" style="font-size: inherit;">Contact me</a> - <a href="https://www.websitepolicies.com/policies/view/ZmgCERal">Cookie Policy</a>
             </div>
         </div>
     </div>
