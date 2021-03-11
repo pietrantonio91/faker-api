@@ -12,11 +12,11 @@
             <ul class="navbar-nav">
                 <li class="nav-item mr-3">
                     @if(app()->getLocale() == 'it')
-                        <a class="nav-link" href="{{str_replace('it', 'en', \URL::full())}}">
+                        <a class="nav-link" href="{{str_replace('/it', '/en', \URL::full())}}">
                             EN
                         </a>
                     @else
-                        <a class="nav-link" href="{{str_replace('en', 'it', \URL::full())}}">
+                        <a class="nav-link" href="{{str_replace('/en', '/it', \URL::full())}}">
                             IT
                         </a>
                     @endif
