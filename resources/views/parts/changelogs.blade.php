@@ -9,13 +9,33 @@
     <div class="col-12 mt-5">
         <div class="accordion" id="accordionChangelogs">
             <div class="card">
-                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_0_1"
-                    aria-expanded="false" aria-controls="changelogs-1_0_1">
+                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_1_0"
+                    aria-expanded="false" aria-controls="changelogs-1_1_0">
+                    <h4 class="mb-0">
+                        1.1.0
+                    </h4>
+                </div>
+                <div id="changelogs-1_1_0" class="collapse show" data-parent="#accordionChangelogs">
+                    <div class="card-body">
+                        <p>
+                            Date of release: 13 March 2021
+                        </p>
+                        <ul>
+                            <li>
+                                Upgrading core technologies
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_0_2"
+                    aria-expanded="false" aria-controls="changelogs-1_0_2">
                     <h4 class="mb-0">
                         1.0.2
                     </h4>
                 </div>
-                <div id="changelogs-1_0_1" class="collapse show" data-parent="#accordionChangelogs">
+                <div id="changelogs-1_0_2" class="collapse" data-parent="#accordionChangelogs">
                     <div class="card-body">
                         <p>
                             Date of release: 23 April 2020
