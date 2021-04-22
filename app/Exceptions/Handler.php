@@ -57,7 +57,7 @@ class Handler extends ExceptionHandler
                         'status' => 'Not found',
                         'code' => 404,
                         'total' => 0
-                        ]);
+                    ], 404);
             } else {
                 return view('404');
             }
