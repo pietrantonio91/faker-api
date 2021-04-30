@@ -23,6 +23,7 @@ $router->group(['prefix' => 'api', 'namespace' => 'Api', 'middleware' => App\Htt
         $router->get('credit_cards/', 'CreditCardsController@index');
         $router->get('books/', 'BooksController@index');
         $router->get('texts/', 'TextsController@index');
+        $router->get('strings/', 'StringsController@index');
         // Custom sarà l'unico particolare che accetta anche parametri senza _
         $router->get('custom/', 'CustomController@index');
 

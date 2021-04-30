@@ -381,6 +381,54 @@
                 </div>
             </div>
             <div class="card">
+                <div class="card-header collapsed" id="headingTen" data-toggle="collapse" data-target="#strings"
+                    aria-expanded="false" aria-controls="strings">
+                    <h4 class="mb-0">
+                        Strings
+                    </h4>
+                </div>
+                <div id="strings" class="collapse" aria-labelledby="headingTen" {{--data-parent="#accordionDocs"--}}>
+                    <div class="card-body">
+                        <p>
+                            Additional optional parameters:
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>_length</td>
+                                        <td>
+                                            integer (default: 10)
+                                        </td>
+                                        <td>
+                                            <pre>_length=32</pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>
+                            Request:
+                        </p>
+                        <pre><code class="html">{{\URL::to('/')}}/api/v1/strings?_quantity=1&_length=6</code></pre>
+                        <p>
+                            Response:
+                        </p>
+                        <pre><code class="json"></code></pre>
+                        <button class="refresh-request btn btn-gradient" onclick="getRequest('{{\URL::to('/')}}/api/v1/strings?_quantity=1&_length=6', 'strings')"><svg class="i-reload" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2"></path>
+                        </svg> Refresh</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
                 <div class="card-header collapsed" id="headingTen" data-toggle="collapse" data-target="#texts"
                     aria-expanded="false" aria-controls="texts">
                     <h4 class="mb-0">
