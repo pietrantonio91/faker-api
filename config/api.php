@@ -91,11 +91,23 @@ return [
             'method' => 'realText',
             'args' => [1000]
         ],
+        'long_text' => [
+            'method' => 'realText',
+            'see' => 'longText'
+        ],
         'firstName' => [
             'method' => 'firstName'
         ],
+        'first_name' => [
+            'method' => 'firstName',
+            'see' => 'firstName'
+        ],
         'lastName' => [
             'method' => 'lastName'
+        ],
+        'last_name' => [
+            'method' => 'lastName',
+            'see' => 'lastName'
         ],
         'name' => [
             'method' => 'special'
@@ -113,6 +125,10 @@ return [
         'dateTime' => [
             'method' => 'dateTime',
         ],
+        'date_time' => [
+            'method' => 'dateTime',
+            'see' => 'dateTime',
+        ],
         'image' => [
             'method' => 'special',
         ],
@@ -122,11 +138,23 @@ return [
         'streetAddress' => [
             'method' => 'streetAddress',
         ],
+        'street_address' => [
+            'method' => 'streetAddress',
+            'see' => 'streetAddress',
+        ],
         'streetName' => [
             'method' => 'streetName',
         ],
+        'street_name' => [
+            'method' => 'streetName',
+            'see' => 'streetName',
+        ],
         'buildingNumber' => [
             'method' => 'buildingNumber',
+        ],
+        'building_number' => [
+            'method' => 'buildingNumber',
+            'see' => 'buildingNumber'
         ],
         'city' => [
             'method' => 'city',
@@ -139,6 +167,10 @@ return [
         ],
         'countryCode' => [
             'method' => 'countryCode',
+        ],
+        'country_code' => [
+            'method' => 'countryCode',
+            'see' => 'countryCode',
         ],
         'state' => [
             'method' => 'state',

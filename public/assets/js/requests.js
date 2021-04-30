@@ -9,6 +9,9 @@ function getRequest(url, target)
             url: url
         }).done(function(response) {
             showRequest(response, target);
+        }).fail(function(response) {
+            // mostro errore nel riquadro target
+            showRequest(response.responseJSON, target);
         });
     }
 }

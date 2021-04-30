@@ -86,7 +86,8 @@ return [
                 </p>
                 <p>
                     Essa consente di costruire una propria risorsa ad hoc usando i tipi di parametro qui elencati:
-                </p>'
+                </p>',
+            'custom_see' => 'Vedi '
         ]
     ]
 ];

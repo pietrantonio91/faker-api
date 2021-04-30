@@ -6,7 +6,7 @@ return [
                 Faker API it's a collection of <strong>completely free APIs</strong> that helps web developers and web designers generate <strong>fake data</strong> in a fast and easy way. No registration is required. No tokens, no authentication.
             </p>
             <p>
-                Every resource allows to choose the API language by \"_locale\" parameter and also allows to select the number of rows requested by \"_quantity\" parameter. <strong>Max 1000 rows</strong>.
+                Every resource allows to choose the API language by the \"_locale\" parameter and also allows to select the number of rows requested by the \"_quantity\" parameter. <strong>Max 1000 rows</strong>.
             </p>
             <p>
                 Check the <a href=\"javascript:scrollTo('docs')\">Docs</a> to read more about every resource. In addition, it's available the <strong>Postman collection</strong> to use these APIs directly in the well-known client.
@@ -33,10 +33,10 @@ return [
                 <pre><code class="html">'.\URL::to('/').'/api/v1/images?_width=380</code></pre>
             </p>
             <p>
-                Data are always wrapped inside "data" and are always returned with the total number of rows ("total") and with the Http response "code".
+                Data are always wrapped inside a "data" object and are always returned with the total number of rows ("total") and with the Http response "code".
             </p>
             <p>
-                Every resource accepts 3 GET common parameters:
+                Every resource accepts 3 common GET parameters:
             </p>',
         '_locale' => '<p>
                 Default: en_US
@@ -52,7 +52,7 @@ return [
                 Default: 10
             </p>
             <p>
-                Max: 1000
+                Min: 1 - Max: 1000
             </p>
             <p>
                 This parameter means the number of rows we want to obtain and accept only integers. If you request more than 1000 rows (maximum) the system will return 1000 rows anyway. Example:
@@ -65,7 +65,7 @@ return [
                 Default: null
             </p>
             <p>
-                This parameter accept an integer and allows to get always the same results. So, executing the same request with _seed parameter set to the same number (ex. 12345) the results will never change. Example:
+                This parameter accept an integer and allows to get always the same results. So, executing the same request with _seed parameter set to the same value (ex. 12345) the results will never change. Example:
             </p>
             <pre><code class="html">'.\URL::to('/').'/api/v1/companies?_seed=12456</code></pre>',
         'resources' => [
@@ -81,8 +81,9 @@ return [
                     where <i>myCustomName1</i> and <i>myCustomName2</i> are my custom parameters names, and <b>customType1</b> and <b>customType2</b> are my custom parameters types. See below the allowed types.
                 </p>
                 <p>
-                    This allows to generate a custom ad hoc resource, using type parameters listed below:
-                </p>'
+                    This allows to generate a custom <i>ad hoc</i> resource, using type parameters listed below:
+                </p>',
+            'custom_see' => 'See '
         ]
     ]
 ];

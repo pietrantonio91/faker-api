@@ -9,6 +9,29 @@
     <div class="col-12 mt-5">
         <div class="accordion" id="accordionChangelogs">
             <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_1_1"
+                    aria-expanded="false" aria-controls="changelogs-1_1_1">
+                    <h4 class="mb-0">
+                        1.1.1
+                    </h4>
+                </div>
+                <div id="changelogs-1_1_1" class="collapse show" data-parent="#accordionChangelogs">
+                    <div class="card-body">
+                        <p>
+                            Date of release: 30 April 2021
+                        </p>
+                        <ul>
+                            <li>
+                                Snake_case synonyms for some "custom" resources
+                            </li>
+                            <li>
+                                General fixes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
                 <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_1_0"
                     aria-expanded="false" aria-controls="changelogs-1_1_0">
                     <h4 class="mb-0">

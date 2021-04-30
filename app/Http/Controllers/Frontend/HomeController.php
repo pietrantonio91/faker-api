@@ -61,7 +61,11 @@ class HomeController extends Controller
                     $args = implode(',', $type['args']);
                     $example = $faker->{$type['method']}($args);
                 } else {
-                    $example = $faker->{$type['method']};
+                    if (isset($type['see'])) {
+                        $example = trans('home.docs.resources.custom_see').'\''.$type['see'].'\'';
+                    } else {
+                        $example = $faker->{$type['method']};
+                    }
                 }
             }
 
