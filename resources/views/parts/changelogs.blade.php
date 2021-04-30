@@ -38,7 +38,7 @@
                         1.1.0
                     </h4>
                 </div>
-                <div id="changelogs-1_1_0" class="collapse show" data-parent="#accordionChangelogs">
+                <div id="changelogs-1_1_0" class="collapse" data-parent="#accordionChangelogs">
                     <div class="card-body">
                         <p>
                             Date of release: 13 March 2021
