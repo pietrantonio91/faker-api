@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_1_0"
+                <div class="card-header collapsed" data-toggle="collapse" data-target="#changelogs-1_1_0"
                     aria-expanded="false" aria-controls="changelogs-1_1_0">
                     <h4 class="mb-0">
                         1.1.0
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_0_2"
+                <div class="card-header collapsed" data-toggle="collapse" data-target="#changelogs-1_0_2"
                     aria-expanded="false" aria-controls="changelogs-1_0_2">
                     <h4 class="mb-0">
                         1.0.2
