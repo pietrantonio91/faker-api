@@ -26,9 +26,23 @@
 
 @section('content')
     <section id="what">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-10 offset-md-1 mt-5">
+                <div class="col-md-2 d-none d-md-flex">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Verticale sx -->
+                    <ins class="adsbygoogle"
+                        style="display:block; width: 100%;"
+                        data-ad-client="ca-pub-2938320348991141"
+                        data-ad-slot="3635890192"
+                        data-ad-format="auto"
+                        data-adtest="{{ (app()->environment('local')) ? 'true' : 'false' }}"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="col-md-8 mt-5">
                     <h2 class="text-center">
                         What's Faker API?
                     </h2>
@@ -43,6 +57,20 @@
                             {{ trans('home.what.current') }} <a href="javascript:scrollTo('changelogs')" class="h4">{{ config('api.current_version') }}</a>
                         </p>
                     </div>
+                </div>
+                <div class="col-md-2 d-none d-md-flex">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Verticale dx -->
+                    <ins class="adsbygoogle"
+                        style="display:block; width: 100%;"
+                        data-ad-client="ca-pub-2938320348991141"
+                        data-ad-slot="3791996388"
+                        data-ad-format="auto"
+                        data-adtest="{{ (app()->environment('local')) ? 'true' : 'false' }}"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
         </div>
