@@ -65,6 +65,7 @@ $app->singleton(
 $app->configure('app');
 $app->configure('api');
 $app->configure('pokemon_list');
+$app->configure('blacklist');
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,7 @@ $app->configure('pokemon_list');
 */
 
 $app->middleware([
+    App\Http\Middleware\BlockIpMiddleware::class,
     App\Http\Middleware\CorsMiddleware::class,
 ]);
 
