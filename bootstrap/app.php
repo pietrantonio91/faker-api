@@ -23,6 +23,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+$app->instance('path.config', app()->basePath() . DIRECTORY_SEPARATOR . 'config');
+$app->instance('path.storage', app()->basePath() . DIRECTORY_SEPARATOR . 'storage');
+
 $app->withFacades();
 
 $app->withEloquent();
@@ -75,12 +78,14 @@ $app->configure('pokemon_list');
 */
 
 $app->middleware([
-    App\Http\Middleware\CorsMiddleware::class
+    App\Http\Middleware\CorsMiddleware::class,
 ]);
 
 $app->routeMiddleware([
     'locale' => App\Http\Middleware\Language::class,
+    'throttle' => App\Http\Middleware\ThrottleMiddleware::class,
 ]);
+
 
 /*
 |--------------------------------------------------------------------------

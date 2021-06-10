@@ -11,7 +11,11 @@
 |
 */
 
-$router->group(['prefix' => 'api', 'namespace' => 'Api', 'middleware' => App\Http\Middleware\CorsMiddleware::class], function() use ($router) {
+$router->group(['prefix' => 'api', 'namespace' => 'Api', 'middleware' => [
+    App\Http\Middleware\CorsMiddleware::class, 
+    'throttle:30,1',
+    ]
+], function() use ($router) {
     $router->group(['prefix' => 'v1', 'namespace' => 'V1'], function() use ($router) {
         $router->get('persons/', 'PersonsController@index');
         $router->get('addresses/', 'AddressesController@index');
