@@ -28,6 +28,9 @@
         gtag('config', 'UA-163807379-1', {'anonymize_ip': true});
     </script>
 
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-2938320348991141" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body>
