@@ -32,11 +32,10 @@
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- Verticale sx -->
                     <ins class="adsbygoogle"
-                        style="display:block; width: 100%;"
+                        style="display:block;"
                         data-ad-client="ca-pub-2938320348991141"
                         data-ad-slot="3635890192"
                         data-ad-format="auto"
-                        data-adtest="{{ (app()->environment('local')) ? 'true' : 'false' }}"
                         data-full-width-responsive="true"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
@@ -62,11 +61,10 @@
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- Verticale dx -->
                     <ins class="adsbygoogle"
-                        style="display:block; width: 100%;"
+                        style="display:block;"
                         data-ad-client="ca-pub-2938320348991141"
                         data-ad-slot="3791996388"
                         data-ad-format="auto"
-                        data-adtest="{{ (app()->environment('local')) ? 'true' : 'false' }}"
                         data-full-width-responsive="true"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
