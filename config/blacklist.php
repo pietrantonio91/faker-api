@@ -1,6 +1,9 @@
 <?php 
 
 return [
+    // 'referers' => [
+    //     // 'worldnamegenerator\.com'
+    // ],
     'ips' => [
         '216.131.87.77',
         '216.131.87.11',

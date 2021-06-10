@@ -80,6 +80,7 @@ $app->configure('blacklist');
 
 $app->middleware([
     App\Http\Middleware\BlockIpMiddleware::class,
+    App\Http\Middleware\BlockRefererMiddleware::class,
     App\Http\Middleware\CorsMiddleware::class,
 ]);
 
