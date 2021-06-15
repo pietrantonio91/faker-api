@@ -28,18 +28,8 @@
     <section id="what">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2 d-none d-md-flex">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- Verticale sx -->
-                    <ins class="adsbygoogle"
-                        style="display:block;"
-                        data-ad-client="ca-pub-2938320348991141"
-                        data-ad-slot="3635890192"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                <div class="col-md-2 d-md-flex d-none justify-content-center py-4">
+                    <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=11&l=ez&f=ifr&linkID=f22e3095801048796f15516b077f3c55&t=pietrantonio-21&tracking_id=pietrantonio-21" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
                 </div>
                 <div class="col-md-8 mt-5">
                     <h2 class="text-center">
@@ -57,18 +47,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-2 d-none d-md-flex">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- Verticale dx -->
-                    <ins class="adsbygoogle"
-                        style="display:block;"
-                        data-ad-client="ca-pub-2938320348991141"
-                        data-ad-slot="3791996388"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                <div class="col-md-2 d-md-flex d-none justify-content-center py-4">
+                    <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=11&l=ez&f=ifr&linkID=f22e3095801048796f15516b077f3c55&t=pietrantonio-21&tracking_id=pietrantonio-21" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -77,6 +57,13 @@
         <polygon points="0 0 100 10 0 10" />
     </svg>
     <section id="docs" class="background-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=48&l=ez&f=ifr&linkID=526f87cfaf64a177018ad91cb268ad7a&t=pietrantonio-21&tracking_id=pietrantonio-21" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
         <div class="container">
             @include('parts.docs')
         </div>
