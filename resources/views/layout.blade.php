@@ -28,12 +28,6 @@
         gtag('config', 'UA-163807379-1', {'anonymize_ip': true});
     </script>
 
-    <script>
-        window.onload = function () {
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        }
-    </script>
-
 </head>
 
 <body>
