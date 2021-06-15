@@ -17,10 +17,32 @@
 
 @section('content')
 <section id="what">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10 offset-md-1 mt-5">
+            <div class="col-md-2 d-md-flex d-none justify-content-center py-4">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=14&l=ur1&category=prime_video&banner=1X33YCKXFGN8ZKYAAWR2&f=ifr&linkID=ebef1f6011effbe6fbcf8e408acdde4e&t=pietrantonio-21&tracking_id=pietrantonio-21" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+            {{-- Mobile --}}
+            <div class="col-12 d-sm-flex d-none d-md-none justify-content-center pt-4">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=26&l=ur1&category=prime_video&banner=145YC6XKJN2WZ21YRD82&f=ifr&linkID=adcd687366a8bff6c92cbe81ac368286&t=pietrantonio-21&tracking_id=pietrantonio-21" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+            {{-- Mobile --}}
+            <div class="col-12 d-flex d-sm-none justify-content-center pt-4">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=288&l=ur1&category=prime_video&banner=0QM45M6W7A80HVECCAR2&f=ifr&linkID=5c2516a0293f4dd8c8d4ddc27fbb77ca&t=pietrantonio-21&tracking_id=pietrantonio-21" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+            <div class="col-md-8 mt-5">
                 {!! trans('download.main') !!}
+            </div>
+            <div class="col-md-2 d-md-flex d-none justify-content-center py-4">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=14&l=ur1&category=prime_video&banner=1X33YCKXFGN8ZKYAAWR2&f=ifr&linkID=ebef1f6011effbe6fbcf8e408acdde4e&t=pietrantonio-21&tracking_id=pietrantonio-21" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+            {{-- Mobile --}}
+            <div class="col-12 d-sm-flex d-none d-md-none justify-content-center pt-4">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=26&l=ur1&category=prime_video&banner=145YC6XKJN2WZ21YRD82&f=ifr&linkID=adcd687366a8bff6c92cbe81ac368286&t=pietrantonio-21&tracking_id=pietrantonio-21" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+            {{-- Mobile --}}
+            <div class="col-12 d-flex d-sm-none justify-content-center pt-4">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=288&l=ur1&category=prime_video&banner=0QM45M6W7A80HVECCAR2&f=ifr&linkID=5c2516a0293f4dd8c8d4ddc27fbb77ca&t=pietrantonio-21&tracking_id=pietrantonio-21" width="320" height="50" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
             </div>
         </div>
     </div>
@@ -155,6 +177,21 @@
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="row mt-4 d-none d-md-block">
+            <div class="col d-flex justify-content-center">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=48&l=ez&f=ifr&linkID=526f87cfaf64a177018ad91cb268ad7a&t=pietrantonio-21&tracking_id=pietrantonio-21" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="row mt-4 d-none d-sm-block d-md-none">
+            <div class="col d-flex justify-content-center">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=13&l=ez&f=ifr&linkID=e09380f86d35a00eb6fdd71c1792d754&t=pietrantonio-21&tracking_id=pietrantonio-21" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="row mt-4 d-block d-sm-none">
+            <div class="col d-flex justify-content-center">
+                <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=42&l=ez&f=ifr&linkID=a2c0d4f2bcbfa0b928f2ffb25993b877&t=pietrantonio-21&tracking_id=pietrantonio-21" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
         </div>
     </div>
     <div id="modalChooseType" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
