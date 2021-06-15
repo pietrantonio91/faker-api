@@ -46,9 +46,19 @@
         {!! trans('home.docs._seed') !!}
     </div>
 </div>
-<div class="row mt-4">
+<div class="row mt-4 d-none d-md-block">
     <div class="col d-flex justify-content-center">
         <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=48&l=ez&f=ifr&linkID=526f87cfaf64a177018ad91cb268ad7a&t=pietrantonio-21&tracking_id=pietrantonio-21" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="row mt-4 d-none d-sm-block d-md-none">
+    <div class="col d-flex justify-content-center">
+        <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=13&l=ez&f=ifr&linkID=e09380f86d35a00eb6fdd71c1792d754&t=pietrantonio-21&tracking_id=pietrantonio-21" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="row mt-4 d-block d-sm-none">
+    <div class="col d-flex justify-content-center">
+        <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=42&l=ez&f=ifr&linkID=a2c0d4f2bcbfa0b928f2ffb25993b877&t=pietrantonio-21&tracking_id=pietrantonio-21" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
     </div>
 </div>
 <div class="row" id="resources">
