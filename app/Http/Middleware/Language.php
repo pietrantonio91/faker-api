@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Session;
 
@@ -25,7 +26,7 @@ class Language
                 $fallback = config('app.fallback_locale');
                 $segments = Arr::prepend($segments, $fallback);
 
-                return redirect()->to(implode('/', $segments));
+                return new RedirectResponse(implode('/', $segments));
             }
 
             app()->setLocale($segment);

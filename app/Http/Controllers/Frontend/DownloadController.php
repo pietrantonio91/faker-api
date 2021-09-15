@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Custom;
 use Faker\Factory as Faker;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xls;
@@ -114,7 +115,7 @@ class DownloadController extends Controller
                 break;
         }
 
-        return redirect('/fake-data-download');
+        return new RedirectResponse('/fake-data-download');
     }
 
     protected function toCsv($request, int $quantity, string $locale = 'en_US', string $delimiter = ',')
