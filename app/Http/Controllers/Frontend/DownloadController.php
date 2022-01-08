@@ -107,7 +107,7 @@ class DownloadController extends Controller
 
             case 'sql':
                 $tableName = @$request->tableName ?: 'table_name';
-                return $this->toSql($newRequest, $quantity, $tableName);
+                return $this->toSql($newRequest, $quantity, $locale, $tableName);
                 break;
 
             default:
