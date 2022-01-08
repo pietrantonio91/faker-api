@@ -12,6 +12,26 @@
                 <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_1_1"
                     aria-expanded="false" aria-controls="changelogs-1_1_1">
                     <h4 class="mb-0">
+                        1.2.0
+                    </h4>
+                </div>
+                <div id="changelogs-1_2_0" class="collapse show" data-parent="#accordionChangelogs">
+                    <div class="card-body">
+                        <p>
+                            Date of release: 08 January 2022
+                        </p>
+                        <ul>
+                            <li>
+                                New field "id" added to some resources (Persons, Users, Addresses, Companies, Products, Books)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#changelogs-1_1_1"
+                    aria-expanded="false" aria-controls="changelogs-1_1_1">
+                    <h4 class="mb-0">
                         1.1.1
                     </h4>
                 </div>
