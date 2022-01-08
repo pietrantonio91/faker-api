@@ -17,6 +17,7 @@ class Person extends BaseResource
         $birthday_end = (@$request->_birthday_end && $request->_birthday_end != '') ? $request->_birthday_end : 'now';
 
         return [
+            'id'            => $this->counter,
             'firstname'     => $this->faker->firstName($gender),
             'lastname'      => $this->faker->lastName(),
             'email'         => $this->faker->email(),

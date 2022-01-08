@@ -15,6 +15,7 @@ class User extends BaseResource
         $gender = (@$request->_gender && $request->_gender != '') ? $request->_gender : $this->genders[array_rand($this->genders)];
 
         return [
+            'id'            => $this->counter,
             'uuid'          => $this->faker->uuid(),
             'firstname'     => $this->faker->firstName($gender),
             'lastname'      => $this->faker->lastName(),

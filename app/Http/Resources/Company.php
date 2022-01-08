@@ -19,6 +19,7 @@ class Company extends BaseResource
         }
 
         return [
+            'id'            => $this->counter,
             'name'          => $this->faker->company(),
             'email'         => $this->faker->email(),
             'vat'           => $this->faker->regexify('[0-9]{'.rand(8,11).'}'),

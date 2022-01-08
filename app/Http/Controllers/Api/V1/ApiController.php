@@ -21,7 +21,7 @@ class ApiController extends Controller
 
         $resource = 'App\\Http\\Resources\\'.$resource;
         for ($i=0; $i < $params->quantity; $i++) {
-            $results[] = (new $resource($request, $faker, $params))->resolve();
+            $results[] = (new $resource($request, $faker, $params, $i + 1))->resolve();
         }
 
         return response()

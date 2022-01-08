@@ -13,6 +13,7 @@ class Address extends BaseResource
     public function toArray($request)
     {
         return [
+            'id'                => $this->counter,
             'street'            => $this->faker->streetAddress(),
             'streetName'        => $this->faker->streetName(),
             'buildingNumber'    => $this->faker->buildingNumber(),

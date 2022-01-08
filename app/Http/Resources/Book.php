@@ -13,6 +13,7 @@ class Book extends BaseResource
     public function toArray($request)
     {
         return [
+            'id'            => $this->counter,
             'title'         => $this->faker->realText(20),
             'author'        => $this->faker->firstName().' '.$this->faker->lastName(),
             'genre'         => ucfirst($this->faker->word()),

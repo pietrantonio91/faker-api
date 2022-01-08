@@ -47,6 +47,7 @@ class Product extends BaseResource
         }
 
         return [
+            'id'            => $this->counter,
             'name'          => $this->faker->text(30),
             'description'   => $this->faker->text(),
             'ean'           => $this->faker->ean13(),
